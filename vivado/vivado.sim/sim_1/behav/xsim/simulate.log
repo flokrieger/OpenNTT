@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+NTT PASSED!
+
+PASSED!
+
+$finish called at time : 857196 ns : File "/home/fkrieger/Documents/openNTT/hardware/CryptoCore/tb_ComputeCore.sv" Line 487
+INFO: xsimkernel Simulation Memory Usage: 126948 KB (Peak: 170684 KB), Simulation CPU Usage: 70550 ms

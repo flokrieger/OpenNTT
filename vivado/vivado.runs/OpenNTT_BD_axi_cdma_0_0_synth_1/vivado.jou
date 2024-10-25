@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Oct 25 14:40:20 2024
+# Process ID: 1848433
+# Current directory: /home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_axi_cdma_0_0_synth_1
+# Command line: vivado -log OpenNTT_BD_axi_cdma_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OpenNTT_BD_axi_cdma_0_0.tcl
+# Log file: /home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_axi_cdma_0_0_synth_1/OpenNTT_BD_axi_cdma_0_0.vds
+# Journal file: /home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_axi_cdma_0_0_synth_1/vivado.jou
+# Running On: ipn070, OS: Linux, CPU Frequency: 2100.032 MHz, CPU Physical cores: 12, Host memory: 33337 MB
+#-----------------------------------------------------------
+source OpenNTT_BD_axi_cdma_0_0.tcl -notrace

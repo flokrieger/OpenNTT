@@ -1,0 +1,32 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fkrieger/Documents/openNTT/hardware/package.svh" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fkrieger/Documents/openNTT/hardware/intmul/dsp_size.svh" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fkrieger/Documents/openNTT/hardware/CryptoCore/ComputeCore.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ComputeCore
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fkrieger/Documents/openNTT/hardware/CryptoCore/ComputeCoreWrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ComputeCoreWrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fkrieger/Documents/openNTT/hardware/CryptoCore/ISA_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ISA_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/package.svh" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/intmul/dsp_size.svh" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/intmul/intmul.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module intmul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/ntt_control/openNTT.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OpenNTT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/twiddle_gen/twiddle_gen_DIF_NR.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TwiddleGen_DIF_NR
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/twiddle_gen/twiddle_gen_DIF_RN.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TwiddleGen_DIF_RN
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/twiddle_gen/twiddle_gen_DIT_NR.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TwiddleGen_DIT_NR
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/twiddle_gen/twiddle_gen_DIT_RN.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TwiddleGen_DIT_RN
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/twiddle_gen/twiddle_gen_DIT_pe1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TwiddleGen_DIT_PE1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/twiddle_gen/twiddle_gen_Merged_DIF_RN.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TwiddleGen_Merged_DIF_RN
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/twiddle_gen/twiddle_gen_Merged_DIT_NR.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TwiddleGen_Merged_DIT_NR
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/modred/modred_wl_mont/wlmont_sub_p0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wlmont_sub_p0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fkrieger/Documents/openNTT/hardware/CryptoCore/tb_ComputeCore.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ComputeCore

@@ -1,0 +1,722 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "OpenNTT_BD_axi_cdma_0_0",
+    "cell_name": "axi_cdma_0",
+    "component_reference": "xilinx.com:ip:axi_cdma:4.1",
+    "ip_revision": "27",
+    "gen_directory": "../../../../../../vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_axi_cdma_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "OpenNTT_BD_axi_cdma_0_0", "resolve_type": "user", "usage": "all" } ],
+        "C_AXI_LITE_IS_ASYNC": [ { "value": "0", "value_src": "propagated", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_M_AXI_DATA_WIDTH": [ { "value": "64", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_M_AXI_MAX_BURST_LEN": [ { "value": "256", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_USE_DATAMOVER_LITE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_INCLUDE_DRE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_READ_ADDR_PIPE_DEPTH": [ { "value": "4", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_WRITE_ADDR_PIPE_DEPTH": [ { "value": "4", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_INCLUDE_SF": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_INCLUDE_SG": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_DLYTMR_RESOLUTION": [ { "value": "256", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_ENABLE_KEYHOLE": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "C_ADDR_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "C_S_AXI_LITE_ADDR_WIDTH": [ { "value": "6", "format": "long", "usage": "all" } ],
+        "C_S_AXI_LITE_DATA_WIDTH": [ { "value": "32", "format": "long", "usage": "all" } ],
+        "C_AXI_LITE_IS_ASYNC": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_M_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_M_AXI_DATA_WIDTH": [ { "value": "64", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_M_AXI_MAX_BURST_LEN": [ { "value": "256", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_INCLUDE_DRE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_USE_DATAMOVER_LITE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_READ_ADDR_PIPE_DEPTH": [ { "value": "4", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_WRITE_ADDR_PIPE_DEPTH": [ { "value": "4", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_INCLUDE_SF": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_INCLUDE_SG": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_M_AXI_SG_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_M_AXI_SG_DATA_WIDTH": [ { "value": "32", "format": "long", "usage": "all" } ],
+        "C_DLYTMR_RESOLUTION": [ { "value": "256", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_FAMILY": [ { "value": "zynq", "resolve_type": "generated", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "tul.com.tw:pynq-z2:part0:1.0" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ],
+        "USE_RDI_CUSTOMIZATION": [ { "value": "TRUE" } ],
+        "USE_RDI_GENERATION": [ { "value": "TRUE" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "27" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_axi_cdma_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2022.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "m_axi_aclk": [ { "direction": "in", "driver_value": "0" } ],
+        "s_axi_lite_aclk": [ { "direction": "in", "driver_value": "0" } ],
+        "s_axi_lite_aresetn": [ { "direction": "in", "driver_value": "1" } ],
+        "cdma_introut": [ { "direction": "out" } ],
+        "s_axi_lite_awready": [ { "direction": "out" } ],
+        "s_axi_lite_awvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "s_axi_lite_awaddr": [ { "direction": "in", "size_left": "5", "size_right": "0", "driver_value": "0" } ],
+        "s_axi_lite_wready": [ { "direction": "out" } ],
+        "s_axi_lite_wvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "s_axi_lite_wdata": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "s_axi_lite_bready": [ { "direction": "in", "driver_value": "0" } ],
+        "s_axi_lite_bvalid": [ { "direction": "out" } ],
+        "s_axi_lite_bresp": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "s_axi_lite_arready": [ { "direction": "out" } ],
+        "s_axi_lite_arvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "s_axi_lite_araddr": [ { "direction": "in", "size_left": "5", "size_right": "0", "driver_value": "0" } ],
+        "s_axi_lite_rready": [ { "direction": "in", "driver_value": "0" } ],
+        "s_axi_lite_rvalid": [ { "direction": "out" } ],
+        "s_axi_lite_rdata": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "s_axi_lite_rresp": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "m_axi_arready": [ { "direction": "in", "driver_value": "0" } ],
+        "m_axi_arvalid": [ { "direction": "out" } ],
+        "m_axi_araddr": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "m_axi_arlen": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "m_axi_arsize": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "m_axi_arburst": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "m_axi_arprot": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "m_axi_arcache": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "m_axi_rready": [ { "direction": "out" } ],
+        "m_axi_rvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "m_axi_rdata": [ { "direction": "in", "size_left": "63", "size_right": "0", "driver_value": "0" } ],
+        "m_axi_rresp": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "m_axi_rlast": [ { "direction": "in", "driver_value": "0" } ],
+        "m_axi_awready": [ { "direction": "in", "driver_value": "0" } ],
+        "m_axi_awvalid": [ { "direction": "out" } ],
+        "m_axi_awaddr": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "m_axi_awlen": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "m_axi_awsize": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "m_axi_awburst": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "m_axi_awprot": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "m_axi_awcache": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "m_axi_wready": [ { "direction": "in", "driver_value": "0" } ],
+        "m_axi_wvalid": [ { "direction": "out" } ],
+        "m_axi_wdata": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
+        "m_axi_wstrb": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "m_axi_wlast": [ { "direction": "out" } ],
+        "m_axi_bready": [ { "direction": "out" } ],
+        "m_axi_bvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "m_axi_bresp": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "cdma_tvect_out": [ { "direction": "out", "size_left": "31", "size_right": "0" } ]
+      },
+      "interfaces": {
+        "M_AXI": {
+          "vlnv": "xilinx.com:interface:aximm:1.0",
+          "abstraction_type": "xilinx.com:interface:aximm_rtl:1.0",
+          "mode": "master",
+          "address_space_ref": "Data",
+          "parameters": {
+            "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "format": "long", "usage": "all" } ],
+            "NUM_READ_OUTSTANDING": [ { "value": "2", "value_src": "constant", "value_permission": "bd", "format": "long", "usage": "all" } ],
+            "NUM_WRITE_OUTSTANDING": [ { "value": "2", "value_src": "constant", "value_permission": "bd", "format": "long", "usage": "all" } ],
+            "DATA_WIDTH": [ { "value": "64", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PROTOCOL": [ { "value": "AXI4", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ADDR_WIDTH": [ { "value": "32", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "AWUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ARUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "BUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BURST": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_LOCK": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_PROT": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_CACHE": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_QOS": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_REGION": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_WSTRB": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_RRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "MAX_BURST_LENGTH": [ { "value": "256", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "OpenNTT_BD_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "ARADDR": [ { "physical_name": "m_axi_araddr" } ],
+            "ARBURST": [ { "physical_name": "m_axi_arburst" } ],
+            "ARCACHE": [ { "physical_name": "m_axi_arcache" } ],
+            "ARLEN": [ { "physical_name": "m_axi_arlen" } ],
+            "ARPROT": [ { "physical_name": "m_axi_arprot" } ],
+            "ARREADY": [ { "physical_name": "m_axi_arready" } ],
+            "ARSIZE": [ { "physical_name": "m_axi_arsize" } ],
+            "ARVALID": [ { "physical_name": "m_axi_arvalid" } ],
+            "AWADDR": [ { "physical_name": "m_axi_awaddr" } ],
+            "AWBURST": [ { "physical_name": "m_axi_awburst" } ],
+            "AWCACHE": [ { "physical_name": "m_axi_awcache" } ],
+            "AWLEN": [ { "physical_name": "m_axi_awlen" } ],
+            "AWPROT": [ { "physical_name": "m_axi_awprot" } ],
+            "AWREADY": [ { "physical_name": "m_axi_awready" } ],
+            "AWSIZE": [ { "physical_name": "m_axi_awsize" } ],
+            "AWVALID": [ { "physical_name": "m_axi_awvalid" } ],
+            "BREADY": [ { "physical_name": "m_axi_bready" } ],
+            "BRESP": [ { "physical_name": "m_axi_bresp" } ],
+            "BVALID": [ { "physical_name": "m_axi_bvalid" } ],
+            "RDATA": [ { "physical_name": "m_axi_rdata" } ],
+            "RLAST": [ { "physical_name": "m_axi_rlast" } ],
+            "RREADY": [ { "physical_name": "m_axi_rready" } ],
+            "RRESP": [ { "physical_name": "m_axi_rresp" } ],
+            "RVALID": [ { "physical_name": "m_axi_rvalid" } ],
+            "WDATA": [ { "physical_name": "m_axi_wdata" } ],
+            "WLAST": [ { "physical_name": "m_axi_wlast" } ],
+            "WREADY": [ { "physical_name": "m_axi_wready" } ],
+            "WSTRB": [ { "physical_name": "m_axi_wstrb" } ],
+            "WVALID": [ { "physical_name": "m_axi_wvalid" } ]
+          }
+        },
+        "S_AXI_LITE": {
+          "vlnv": "xilinx.com:interface:aximm:1.0",
+          "abstraction_type": "xilinx.com:interface:aximm_rtl:1.0",
+          "mode": "slave",
+          "memory_map_ref": "S_AXI_LITE",
+          "parameters": {
+            "DATA_WIDTH": [ { "value": "32", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PROTOCOL": [ { "value": "AXI4LITE", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ADDR_WIDTH": [ { "value": "6", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "AWUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ARUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "BUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BURST": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_LOCK": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_PROT": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_CACHE": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_QOS": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_REGION": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_WSTRB": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_RRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_OUTSTANDING": [ { "value": "8", "value_src": "constant_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_OUTSTANDING": [ { "value": "8", "value_src": "constant_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "MAX_BURST_LENGTH": [ { "value": "1", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "OpenNTT_BD_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_THREADS": [ { "value": "4", "value_src": "constant_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_THREADS": [ { "value": "4", "value_src": "constant_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "ARADDR": [ { "physical_name": "s_axi_lite_araddr" } ],
+            "ARREADY": [ { "physical_name": "s_axi_lite_arready" } ],
+            "ARVALID": [ { "physical_name": "s_axi_lite_arvalid" } ],
+            "AWADDR": [ { "physical_name": "s_axi_lite_awaddr" } ],
+            "AWREADY": [ { "physical_name": "s_axi_lite_awready" } ],
+            "AWVALID": [ { "physical_name": "s_axi_lite_awvalid" } ],
+            "BREADY": [ { "physical_name": "s_axi_lite_bready" } ],
+            "BRESP": [ { "physical_name": "s_axi_lite_bresp" } ],
+            "BVALID": [ { "physical_name": "s_axi_lite_bvalid" } ],
+            "RDATA": [ { "physical_name": "s_axi_lite_rdata" } ],
+            "RREADY": [ { "physical_name": "s_axi_lite_rready" } ],
+            "RRESP": [ { "physical_name": "s_axi_lite_rresp" } ],
+            "RVALID": [ { "physical_name": "s_axi_lite_rvalid" } ],
+            "WDATA": [ { "physical_name": "s_axi_lite_wdata" } ],
+            "WREADY": [ { "physical_name": "s_axi_lite_wready" } ],
+            "WVALID": [ { "physical_name": "s_axi_lite_wvalid" } ]
+          }
+        },
+        "M_AXI_ACLK": {
+          "vlnv": "xilinx.com:signal:clock:1.0",
+          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "ASSOCIATED_BUSIF": [ { "value": "M_AXI:M_AXI_SG", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "OpenNTT_BD_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_RESET": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "CLK": [ { "physical_name": "m_axi_aclk" } ]
+          }
+        },
+        "S_AXI_LITE_ACLK": {
+          "vlnv": "xilinx.com:signal:clock:1.0",
+          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "ASSOCIATED_BUSIF": [ { "value": "S_AXI_LITE", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "ASSOCIATED_RESET": [ { "value": "s_axi_lite_aresetn", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "OpenNTT_BD_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "CLK": [ { "physical_name": "s_axi_lite_aclk" } ]
+          }
+        },
+        "AXI_RESETN": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_LOW", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "s_axi_lite_aresetn" } ]
+          }
+        },
+        "CDMA_INTERRUPT": {
+          "vlnv": "xilinx.com:signal:interrupt:1.0",
+          "abstraction_type": "xilinx.com:signal:interrupt_rtl:1.0",
+          "mode": "master",
+          "parameters": {
+            "SENSITIVITY": [ { "value": "LEVEL_HIGH", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "PortWidth": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "INTERRUPT": [ { "physical_name": "cdma_introut" } ]
+          }
+        }
+      },
+      "address_spaces": {
+        "Data": {
+          "range": "4294967296",
+          "width": "32"
+        }
+      },
+      "memory_maps": {
+        "S_AXI_LITE": {
+          "display_name": "S_AXI_LITE",
+          "description": "Memory Map for S_AXI_LITE",
+          "address_blocks": {
+            "Reg": {
+              "base_address": "0",
+              "range": "256",
+              "display_name": "Reg",
+              "description": "Register Block",
+              "usage": "register",
+              "access": "read-write",
+              "registers": {
+                "CDMACR": {
+                  "address_offset": "0x0",
+                  "size": 32,
+                  "display_name": "CDMA Control Register",
+                  "description": "CDMA Control Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x10002",
+                  "fields": {
+                    "TailPntrEn": {
+                      "bit_offset": 1,
+                      "bit_width": 1,
+                      "display_name": "Tail Pointer Mode Enable",
+                      "description": "Indicates tail pointer mode is enabled to the SG Engine. This bit is fixed to 1 and always read as 1 when SG is included. If the CDMA is built with SG disabled (Simple Mode Only), the default value of the port is 0.\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    },
+                    "Reset": {
+                      "bit_offset": 2,
+                      "bit_width": 1,
+                      "display_name": "Reset",
+                      "description": "Soft reset control for the AXI CDMA core. Setting this bit to a 1 causes the AXI CDMA to be reset. Reset is accomplished gracefully. Committed AXI4 transfers are then completed. Other queued transfers are flushed. After completion of a soft reset, all registers and bits are in the Reset State.  \n  0 - Reset NOT in progress, Normal operation      1 - Reset in progress\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "SGMode": {
+                      "bit_offset": 3,
+                      "bit_width": 1,
+                      "display_name": "SGMode",
+                      "description": "This bit controls the transfer mode of the CDMA. Setting this bit to a 1 causes the AXI CDMA to operate in a Scatter Gather mode if the Scatter Gather engine is included.   0 - Simple DMA Mode   1 - Scatter Gather Mode This bit must only be changed when the CDMA engine is idle (CDMASR.IDLE = 1). Changing the state of this bit at any other time has undefined results.\nThis bit must be set to a 0 then back to 1 by the software application to force the CDMA SG engine to use a new value written to the CURDESC_PNTR register.\nThis bit must be set prior to setting the CDMACR.Dly_IrqEn bit. Otherwise, the CDMACR.Dly_IrqEn bit does not get set.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Key_Hole_Read": {
+                      "bit_offset": 4,
+                      "bit_width": 1,
+                      "display_name": "Key Hole Read",
+                      "description": "Writing 1 to this enables the keyhole read (FIXED address AXI transaction). This value should not be changed when a transfer is in progress. This value should remain constant until all the descriptors are processed (for SG = 1).\nCDMA shows unexpected behavior if this value is changed in the middle of a transfer. It is the responsibility of the slave device to enforce the functionality. When enabling Key Hole operation, the MAX BURST LENGTH should be set to 16.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Key_Hole_Write": {
+                      "bit_offset": 5,
+                      "bit_width": 1,
+                      "display_name": "Key Hole Write",
+                      "description": "Writing 1 to this enables the keyhole write (FIXED address AXI transaction). This value should not be changed when a transfer is in progress. This value should remain constant until all the descriptors are processed (for SG = 1).\nCDMA shows unexpected behavior if this value is changed in the middle of a transfer. It is the responsibility of the slave device to enforce the functionality. When enabling Key Hole operation, the MAX BURST LENGTH should be set to 16.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Cyclic_BD_Enable": {
+                      "bit_offset": 6,
+                      "bit_width": 1,
+                      "display_name": "Cyclic BD Enable",
+                      "description": "When set to 1, you can use the CDMA in Cyclic Buffer Descriptor (BD) mode without any user intervention. In this mode, the Scatter Gather module ignores the Completed bit of the BD. With this feature, you can use the same BDs in cyclic manner without worrying about any errors.\nThis bit should be set before updating the TAILDESC register. Changing this bit while the transfer is in progress will generate undefined results.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "IOC_IrqEn": {
+                      "bit_offset": 12,
+                      "bit_width": 1,
+                      "display_name": "Complete Interrupt Enable",
+                      "description": "Complete Interrupt Enable. When set to 1, it allows CDMASR.IOC_Irq to generate an interrupt out for completed DMA transfers.   0 - IOC Interrupt disabled   1 - IOC Interrupt enabled.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Dly_IrqEn": {
+                      "bit_offset": 13,
+                      "bit_width": 1,
+                      "display_name": "Delay Timer Interrupt Enable",
+                      "description": "Delay Timer Interrupt Enable. When set to 1, it allows CDMASR.Dly_Irq to generate an interrupt out. This is only used with Scatter Gather assisted transfers.     0 - Delay Interrupt disabled    1 - Delay Interrupt enabled.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Err_IrqEn": {
+                      "bit_offset": 2,
+                      "bit_width": 1,
+                      "display_name": "Error Interrupt Enable",
+                      "description": "Error Interrupt Enable. When set to 1, it allows the CDMASR.Err_Irq to generate an interrupt out.      0 - Error Interrupt disabled   1 - Error Interrupt enabled.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "IRQThreshold": {
+                      "bit_offset": 16,
+                      "bit_width": 8,
+                      "display_name": "Interrupt Threshold",
+                      "description": "Interrupt Threshold. This value is used for setting the interrupt threshold. When IOC interrupt events occur, an internal counter counts down from the Interrupt Threshold setting. When the count reaches zero, an interrupt out is generated by the DMA engine.\nNote: The minimum setting for the threshold is 0x01. A write of 0x00 to this register has no effect.\nNote: This is irrelevant when Scatter Gather is excluded.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "IRQDelay": {
+                      "bit_offset": 24,
+                      "bit_width": 8,
+                      "display_name": "Interrupt Delay Timeout",
+                      "description": "Interrupt Delay Timeout. This value is used for setting the interrupt delay timeout value. The interrupt timeout is a mechanism for causing the CDMA engine to generate an interrupt after the delay time period has expired.\nTimer begins counting at the end of a packet and resets with the receipt of a new packet or a timeout event occurs.\nNote: Setting this value to zero disables the delay timer interrupt.\nNote: This is irrelevant when Scatter Gather is excluded.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "CDMASR": {
+                  "address_offset": "0x04",
+                  "size": 32,
+                  "display_name": "CDMA Status Register",
+                  "description": "CDMA Status Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x10000",
+                  "fields": {
+                    "Idle": {
+                      "bit_offset": 1,
+                      "bit_width": 1,
+                      "display_name": "CDMA Idle",
+                      "description": "CDMA Idle. Indicates the state of AXI CDMA operations.\nWhen set and in Simple DMA mode, the bit indicates the programmed transfer has completed and the CDMA is waiting for a new transfer to be programmed. Writing to the bytes to transfer (BTT) register in Simple DMA mode causes the CDMA to start (not Idle).\nWhen set and in SG mode, the bit indicates the SG Engine has reached the tail pointer for the associated channel and all queued descriptors have been processed. Writing to the tail pointer register automatically restarts CDMA SG operations.      0 - Not Idle – Simple or SG DMA operations are in progress.      1 - Idle – Simple or SG operations completed or not started.\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    },
+                    "SGIncld": {
+                      "bit_offset": 3,
+                      "bit_width": 1,
+                      "display_name": "SG Included",
+                      "description": "SG Included. This bit indicates if the AXI CDMA has been implemented with Scatter Gather support included. This is used by application software (drivers) to determine if SG Mode can be utilized.   0 - Scatter Gather not included. Only Simple DMA operations are supported.   1 - Scatter Gather is included. Both Simple DMA and Scatter Gather operations are supported.\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    },
+                    "DMAIntErr": {
+                      "bit_offset": 4,
+                      "bit_width": 1,
+                      "display_name": "DMA Internal Error",
+                      "description": "DMA Internal Error. This bit indicates that a internal error has been encountered by the DataMover on the data transport channel. This error can occur if a 0 value BTT (bytes to transfer) is fed to the AXI DataMover or DataMover has an internal processing error. A BTT of 0 only happens if the BTT register is written with zeros (in Simple DMA mode) or a BTT specified in the Control word of a fetched descriptor is set to 0 (SG Mode). This error condition causes the AXI CDMA to halt gracefully. The CDMASR.IDLE bit is set to 1 when the CDMA has completed shut down.\nCURDESC_PNTR register is updated with the descriptor pointer value when this error is detected.      0 - No CDMA Internal Errors.      1 - CDMA Internal Error detected. CDMA Engine halts.  A reset (soft or hard) must be issued to clear the error condition.\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    },
+                    "DMASlvErr": {
+                      "bit_offset": 5,
+                      "bit_width": 1,
+                      "display_name": "DMA Slave Error",
+                      "description": "DMA Slave Error. This bit indicates that an AXI slave error response has been received by the AXI DataMover during an AXI transfer (read or write). This error condition causes the AXI CDMA to halt gracefully. The CDMASR.IDLE bit is set to 1 when the CDMA has completed shutdown. The CURDESC_PNTR register is updated with the descriptor pointer value when this error is detected.      0 - No CDMA Slave Errors.   1 - CDMA Slave Error detected. CDMA Engine halts.  A reset (soft or hard) must be issued to clear the error condition.\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    },
+                    "DMADecErr": {
+                      "bit_offset": 6,
+                      "bit_width": 1,
+                      "display_name": "DMA Decode Error",
+                      "description": "DMA Decode Error. This bit indicates that an AXI decode error has been received by the AXI DataMover. This error occurs if the DataMover issues an address request to an invalid location.\nThis error condition causes the AXI CDMA to halt gracefully. The CDMASR.IDLE bit is set to 1 when the CDMA has completed shut down. The CURDESC_PNTR register is updated with the descriptor pointer value when this error is detected.      0 - No CDMA Decode Errors.      1 - CDMA Decode Error detected. CDMA Engine halts.  A reset (soft or hard) must be issued to clear the error condition.\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    },
+                    "SGIntErr": {
+                      "bit_offset": 8,
+                      "bit_width": 1,
+                      "display_name": "Scatter Gather Internal Error",
+                      "description": "Scatter Gather Internal Error. This bit indicates that an internal error has been encountered by the SG Engine. This error condition causes the AXI CDMA to halt gracefully. The CDMASR.IDLE bit is set to 1 when the CDMA has completed shutdown. The CURDESC_PNTR register is updated with the descriptor pointer value when this error is detected.      0 - No SG Internal Errors      1 - SG Internal Error detected. CDMA Engine halts.  A reset (soft or hard) must be issued to clear the error condition.\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    },
+                    "SGSlvEr": {
+                      "bit_offset": 9,
+                      "bit_width": 1,
+                      "display_name": "Scatter Gather Slave Error",
+                      "description": "Scatter Gather Slave Error. This bit indicates that an AXI slave error response has been received by the SG Engine during an AXI transfer (transfer descriptor read or write). This error condition causes the AXI CDMA to halt gracefully. The CDMASR.IDLE bit is set to 1 when the CDMA has completed shut down. The CURDESC_PNTR register is updated with the descriptor pointer value when this error is detected.      0 - No SG Slave Errors      1 - SG Slave Error detected. CDMA Engine halts.  A reset (soft or hard) must be issued to clear the error condition.\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    },
+                    "SGDecErr": {
+                      "bit_offset": 10,
+                      "bit_width": 1,
+                      "display_name": "Scatter Gather Decode Error",
+                      "description": "Scatter Gather Decode Error. This bit indicates that an AXI decode error has been received by the SG Engine during an AXI transfer (transfer descriptor read or write). This error occurs if the SG Engine issues an address request to an invalid location. This error condition causes the AXI CDMA to gracefully halt. The CDMASR.IDLE bit is set to 1 when the CDMA has completed shut down. The CURDESC_PNTR register is updated with the descriptor pointer value when this error is detected.      0 - No SG Decode Errors      1 - SG Decode Error detected. CDMA Engine halts.  A reset (soft or hard) must be issued to clear the error condition.\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    },
+                    "IOC_Irq": {
+                      "bit_offset": 12,
+                      "bit_width": 1,
+                      "display_name": "Interrupt on Complete",
+                      "description": "Interrupt on Complete. When set to 1, this bit indicates an interrupt event has been generated on completion of a DMA transfer (either a Simple or SG). If the corresponding enable bit is set (CDMACR.IOC_IrqEn = 1), an interrupt out is generated from the AXI CDMA.      0 - No IOC Interrupt      1 - IOC Interrupt active When operating in SG mode, the criteria specified by the interrupt threshold must also be met.  Writing a 1 to this bit will clear it.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Dly_Irq": {
+                      "bit_offset": 13,
+                      "bit_width": 1,
+                      "display_name": "Interrupt on Delay",
+                      "description": "Interrupt on Delay. When set to 1, this bit indicates an interrupt event has been generated on a delay timer timeout. If the corresponding enable bit is set (CDMACR.Dly_IrqEn = 1), an interrupt out is generated from the AXI CDMA.\n  0 - No Delay Interrupt      1 - Delay Interrupt active Writing a 1 to this bit will clear it. This bit is cleared whenever CDMACR.SGMode is set to 0\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Err_Irq": {
+                      "bit_offset": 14,
+                      "bit_width": 1,
+                      "display_name": "Interrupt on Error",
+                      "description": "Interrupt on Error. When set to 1, this bit indicates an interrupt event has been generated due to an error condition. If the corresponding enable bit is set (CDMACR.Err_IrqEn = 1), an interrupt out is generated from the AXI CDMA.\n  0 - No error Interrupt      1 - Error interrupt active Writing a 1 to this bit will clear it.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "IRQThresholdSts": {
+                      "bit_offset": 16,
+                      "bit_width": 8,
+                      "display_name": "Interrupt Threshold Status",
+                      "description": "Interrupt Threshold Status. This field reflects the current interrupt threshold value in the SG Engine.\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    },
+                    "RQDelaySts": {
+                      "bit_offset": 24,
+                      "bit_width": 8,
+                      "display_name": "Interrupt Delay Time Status",
+                      "description": "Interrupt Delay Time Status. This field reflects the current interrupt delay timer value in the SG Engine.\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "CURDESC_PNTR": {
+                  "address_offset": "0x08",
+                  "size": 32,
+                  "display_name": "CDMA Current Descriptor Pointer Register",
+                  "description": "CDMA Current Descriptor Pointer Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Current_Descriptor_Pointer": {
+                      "bit_offset": 6,
+                      "bit_width": 26,
+                      "display_name": "Current Descriptor Pointer",
+                      "description": "Current Descriptor Pointer. Indicates the pointer of the current descriptor being worked on. This register must contain a pointer to a valid descriptor prior to writing to the TAILDESC_PTR register. Failure to do so results in an undefined operation by the CDMA.\nWhen the CDMA SG Engine is running (CDMASR.IDLE = 0), the CURDESC_PNTR register is updated by the SG Engine to reflect the starting address of the current descriptor being executed.\nOn error detection, the CURDESC_PNTR register is updated to reflect the descriptor associated with the detected error.\nThe register should only be written by the software application when the AXI CDMA is idle (CDMASR.IDLE = 1). Descriptor addresses written to this field must be aligned to 64-byte boundaries (sixteen 32-bit words).\nExamples are 0x00, 0x40, 0x80. Any other alignment has undefined results.\nThis register is cleared when CDMACR.SGMode = 0.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "CURDESC_PNTR_MSB": {
+                  "address_offset": "0x0C",
+                  "size": 32,
+                  "display_name": "CDMA Current Descriptor Pointer Register",
+                  "description": "CDMA Current Descriptor Pointer Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Current_Descriptor_Pointer": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Current Descriptor Pointer",
+                      "description": "Current Descriptor Pointer. Indicates the pointer of the current descriptor being worked on. This register must contain a pointer to a valid descriptor prior to writing to the TAILDESC_PTR register. Failure to do so results in an undefined operation by the CDMA.\nWhen the CDMA SG Engine is running (CDMASR.IDLE = 0), the CURDESC_PNTR register is updated by the SG Engine to reflect the starting address of the current descriptor being executed.\nOn error detection, the CURDESC_PNTR register is updated to reflect the descriptor associated with the detected error.\nThe register should only be written by the software application when the AXI CDMA is idle (CDMASR.IDLE = 1). Descriptor addresses written to this field must be aligned to 64-byte boundaries (sixteen 32-bit words).\nExamples are 0x00, 0x40, 0x80. Any other alignment has undefined results.\nThis register is cleared when CDMACR.SGMode = 0.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "TAILDESC_PNTR": {
+                  "address_offset": "0x10",
+                  "size": 32,
+                  "display_name": "CDMA Tail Descriptor Pointer Register",
+                  "description": "CDMA Tail Descriptor Pointer Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Tail_Descriptor_Pointer": {
+                      "bit_offset": 6,
+                      "bit_width": 26,
+                      "display_name": "Tail Descriptor Pointer",
+                      "description": "Tail Descriptor Pointer. Indicates pause pointer for descriptor chain execution. The AXI CDMA SG Engine pauses descriptor fetching after completing operations on the descriptor whose current descriptor pointer matches the tail descriptor pointer.\nWhen the AXI CDMA is in SG Mode and the address space is 32 bits (CDMACR.SGMode = 1), a write by the software application to the TAILDESC_PNTR register causes the AXI CDMA SG Engine to start fetching descriptors starting from the CURDESC_PNTR register value. If the SG engine is paused at a tail pointer pause point, the SG engine restarts descriptor execution at the next sequential transfer descriptor. If the AXI CDMA is not idle (CDMASR.IDLE = 0), writing to the TAILDESC_PNTR has no effect except to reposition the SG pause point.\nThis register is cleared when CDMACR.SGMode = 0.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "TAILDESC_PNTR_MSB": {
+                  "address_offset": "0x14",
+                  "size": 32,
+                  "display_name": "CDMA Tail Descriptor Pointer Register",
+                  "description": "CDMA Tail Descriptor Pointer Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Tail_Descriptor_Pointer": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Tail Descriptor Pointer",
+                      "description": "Tail Descriptor Pointer. Indicates pause pointer for descriptor chain execution. The AXI CDMA SG Engine pauses descriptor fetching after completing operations on the descriptor whose current descriptor pointer matches the tail descriptor pointer.\nWhen the AXI CDMA is in SG Mode and the address space is 32 bits (CDMACR.SGMode = 1), a write by the software application to the TAILDESC_PNTR register causes the AXI CDMA SG Engine to start fetching descriptors starting from the CURDESC_PNTR register value. If the SG engine is paused at a tail pointer pause point, the SG engine restarts descriptor execution at the next sequential transfer descriptor. If the AXI CDMA is not idle (CDMASR.IDLE = 0), writing to the TAILDESC_PNTR has no effect except to reposition the SG pause point.\nThis register is cleared when CDMACR.SGMode = 0.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "SA": {
+                  "address_offset": "0x18",
+                  "size": 32,
+                  "display_name": "CDMA Source Address Register",
+                  "description": "CDMA Source Address Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Source_Address": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Source Address",
+                      "description": "Source Address Register. This register is used by Simple DMA operations (CDMACR.SGMode = 0) as the starting read address for DMA data transfers. The address value written can be at any byte offset.\nThe software application should only write to this register when the AXI CDMA is idle (CDMASR.IDLE = 1).\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "SA_MSB": {
+                  "address_offset": "0x1C",
+                  "size": 32,
+                  "display_name": "CDMA Source Address Register",
+                  "description": "CDMA Source Address Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Source_Address": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Source Address",
+                      "description": "Source Address Register. This register is used by Simple DMA operations (CDMACR.SGMode = 0) as the starting read address for DMA data transfers. The address value written can be at any byte offset.\nThe software application should only write to this register when the AXI CDMA is idle (CDMASR.IDLE = 1).\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "DA": {
+                  "address_offset": "0x20",
+                  "size": 32,
+                  "display_name": "CDMA Destination Address Register",
+                  "description": "CDMA Destination Address Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Destination_Address": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Destination Address",
+                      "description": "Destination Address Register. This register is used by Simple DMA operations as the starting write address for DMA data transfers. The address value written has restrictions relative to the Source Address and Data Realignment Engine (DRE) inclusion as follows.\nIf DRE is not included in the AXI CDMA or the data width is 128 or 256 bits, then the address offset of the Destination address must match that of the Source Address register value. Offset is defined as that portion of a system address that is used to designate a byte position within a single data beat width. For example, a 32-bit data bus has four addressable byte positions within a single data beat (0, 1, 2, and 3). The portion of the address that designates these positions is the offset. The number of address bits used for the offset varies with the transfer bus data width.\nThe software application should only write to this register when the AXI CDMA is idle (CDMASR.IDLE = 1).\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "DA_MSB": {
+                  "address_offset": "0x24",
+                  "size": 32,
+                  "display_name": "CDMA Destination Address Register",
+                  "description": "CDMA Destination Address Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Destination_Address": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Destination Address",
+                      "description": "Destination Address Register. This register is used by Simple DMA operations as the starting write address for DMA data transfers. \nThe software application should only write to this register when the AXI CDMA is idle (CDMASR.IDLE = 1).\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "BTT": {
+                  "address_offset": "0x28",
+                  "size": 32,
+                  "display_name": "CDMA Bytes To Transfer Register",
+                  "description": "CDMA Bytes To Transfer Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "BTT": {
+                      "bit_offset": 0,
+                      "bit_width": 23,
+                      "display_name": "Bytes To Transfer",
+                      "description": "Bytes to Transfer. This register field is used for Simple DMA transfers and indicates the desired number of bytes to DMA from the Source Address to the Destination Address. A maximum of 8,388,607 bytes of data can be specified by this field for the associated transfer.\nWriting to the BTT register also initiates the Simple DMA transfer.\nNote: A value of zero (0) is not allowed and causes a DMA internal error to be set by AXI CDMA. The software application should only write to this register when the AXI CDMA is idle (CDMASR.IDLE = 1).\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

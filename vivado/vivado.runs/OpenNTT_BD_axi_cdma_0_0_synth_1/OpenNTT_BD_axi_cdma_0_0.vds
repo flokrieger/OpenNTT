@@ -1,0 +1,619 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Oct 25 14:40:20 2024
+# Process ID: 1848433
+# Current directory: /home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_axi_cdma_0_0_synth_1
+# Command line: vivado -log OpenNTT_BD_axi_cdma_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OpenNTT_BD_axi_cdma_0_0.tcl
+# Log file: /home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_axi_cdma_0_0_synth_1/OpenNTT_BD_axi_cdma_0_0.vds
+# Journal file: /home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_axi_cdma_0_0_synth_1/vivado.jou
+# Running On: ipn070, OS: Linux, CPU Frequency: 2100.032 MHz, CPU Physical cores: 12, Host memory: 33337 MB
+#-----------------------------------------------------------
+source OpenNTT_BD_axi_cdma_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1713.246 ; gain = 82.023 ; free physical = 4006 ; free virtual = 14603
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: OpenNTT_BD_axi_cdma_0_0
+Command: synth_design -top OpenNTT_BD_axi_cdma_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1848777
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2453.359 ; gain = 367.801 ; free physical = 498 ; free virtual = 7610
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1664.549; parent = 1537.490; children = 127.060
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3433.379; parent = 2459.301; children = 974.078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'OpenNTT_BD_axi_cdma_0_0' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_axi_cdma_0_0/synth/OpenNTT_BD_axi_cdma_0_0.vhd:114]
+	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_LITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_LITE_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_MAX_BURST_LEN bound to: 256 - type: integer 
+	Parameter C_INCLUDE_DRE bound to: 0 - type: integer 
+	Parameter C_USE_DATAMOVER_LITE bound to: 0 - type: integer 
+	Parameter C_READ_ADDR_PIPE_DEPTH bound to: 4 - type: integer 
+	Parameter C_WRITE_ADDR_PIPE_DEPTH bound to: 4 - type: integer 
+	Parameter C_INCLUDE_SF bound to: 0 - type: integer 
+	Parameter C_INCLUDE_SG bound to: 0 - type: integer 
+	Parameter C_M_AXI_SG_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_SG_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_DLYTMR_RESOLUTION bound to: 256 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-3491] module 'axi_cdma' declared at '/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:15027' bound to instance 'U0' of component 'axi_cdma' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_axi_cdma_0_0/synth/OpenNTT_BD_axi_cdma_0_0.vhd:285]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:15327]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_simple_wrap' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:8729]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_reset' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:984]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_pulse_gen' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_pulse_gen' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_pulse_gen__parameterized0' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_pulse_gen__parameterized0' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_pulse_gen__parameterized1' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_pulse_gen__parameterized1' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_reset' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:984]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_reg_module' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:5316]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_lite_if' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:2173]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_lite_if' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:2173]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_register' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:3810]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_register' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:3810]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_reg_module' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:5316]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_simple_cntlr' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:7706]
+INFO: [Synth 8-226] default block is never used [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:8247]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_simple_cntlr' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:7706]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_full_wrap' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_status_cntl' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_status_cntl' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized0' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized0' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-226] default block is never used [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:9490]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rddata_cntl' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rdmux' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rdmux' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized0' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized0' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized0' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized0' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized0' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized0' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rddata_cntl' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_full_wrap' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized1' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized1' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized0' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized0' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized1' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized1' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized1' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized1' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized2' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized2' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized2' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized2' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized2' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized2' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc__parameterized0' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-226] default block is never used [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:9490]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc__parameterized0' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl__parameterized0' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl__parameterized0' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wrdata_cntl' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized3' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized3' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized3' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized3' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized3' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized3' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wrdata_cntl' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid2mm_buf' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:18998]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_demux' [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:14117]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_demux' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:14117]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid2mm_buf' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:18998]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_full_wrap' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_simple_wrap' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:8729]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:15327]
+INFO: [Synth 8-256] done synthesizing module 'OpenNTT_BD_axi_cdma_0_0' (0#1) [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_axi_cdma_0_0/synth/OpenNTT_BD_axi_cdma_0_0.vhd:114]
+WARNING: [Synth 8-6014] Unused sequential element sig_axilite_por2rst_out_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:1197]
+WARNING: [Synth 8-6014] Unused sequential element awaddr_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:2267]
+WARNING: [Synth 8-6014] Unused sequential element wdata_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:2269]
+WARNING: [Synth 8-6014] Unused sequential element GEN_SYNC_WRITE.axi2ip_wrdata_i_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:2422]
+WARNING: [Synth 8-6014] Unused sequential element GEN_SYNC_WRITE.awready_i_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:2254]
+WARNING: [Synth 8-6014] Unused sequential element GEN_SYNC_WRITE.rdy1_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:2383]
+WARNING: [Synth 8-6014] Unused sequential element GEN_SYNC_READ.arvalid_re_d1_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:3164]
+WARNING: [Synth 8-6014] Unused sequential element sg_ftch_error_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:4383]
+WARNING: [Synth 8-6014] Unused sequential element sg_updt_error_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:4384]
+WARNING: [Synth 8-6014] Unused sequential element error_pointer_set_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:4650]
+WARNING: [Synth 8-6014] Unused sequential element irqthresh_wren_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:4035]
+WARNING: [Synth 8-6014] Unused sequential element sg_interr_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:4363]
+WARNING: [Synth 8-6014] Unused sequential element sg_slverr_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:4364]
+WARNING: [Synth 8-6014] Unused sequential element sg_decerr_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:4365]
+WARNING: [Synth 8-6014] Unused sequential element dly_irq_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:4524]
+WARNING: [Synth 8-6014] Unused sequential element currdesc_updated_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:4651]
+WARNING: [Synth 8-6014] Unused sequential element taildesc_lsb_int_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:3940]
+WARNING: [Synth 8-6014] Unused sequential element GEN_TAILUPDATE_EQL32.tailpntr_updated_d1_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:4827]
+WARNING: [Synth 8-6014] Unused sequential element tailpntr_updated_d2_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/6590/hdl/axi_cdma_v4_1_vh_rfs.vhd:4865]
+WARNING: [Synth 8-6014] Unused sequential element sig_cmd_stat_rst_int_reg_n_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:191]
+WARNING: [Synth 8-6014] Unused sequential element sig_mmap_rst_reg_n_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:194]
+WARNING: [Synth 8-6014] Unused sequential element sig_stream_rst_reg_n_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:197]
+WARNING: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:2014]
+WARNING: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:2014]
+WARNING: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:8048]
+WARNING: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:8359]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10410]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10417]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_dre_src_align_reg_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:12886]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_dre_dest_align_reg_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:12887]
+WARNING: [Synth 8-6014] Unused sequential element sig_coelsc_reg_empty_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:13225]
+WARNING: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:8048]
+WARNING: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:8359]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10410]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10417]
+WARNING: [Synth 8-6014] Unused sequential element sig_single_dbeat_reg was removed.  [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:17228]
+WARNING: [Synth 8-7129] Port debeat_saddr_lsb[2] in module axi_datamover_wr_demux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debeat_saddr_lsb[1] in module axi_datamover_wr_demux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debeat_saddr_lsb[0] in module axi_datamover_wr_demux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_strm_eop in module axi_datamover_wrdata_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_stbs_asserted[7] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_stbs_asserted[6] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_stbs_asserted[5] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_stbs_asserted[4] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_stbs_asserted[3] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_stbs_asserted[2] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_stbs_asserted[1] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_stbs_asserted[0] in module axi_datamover_wrdata_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port realign2wdc_eop_error in module axi_datamover_wrdata_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2addr_data_rdy in module axi_datamover_addr_cntl__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port num_valid_bytes[2] in module axi_datamover_strb_gen2__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port num_valid_bytes[1] in module axi_datamover_strb_gen2__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port num_valid_bytes[0] in module axi_datamover_strb_gen2__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port end_addr_offset[2] in module axi_datamover_strb_gen2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port end_addr_offset[1] in module axi_datamover_strb_gen2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port end_addr_offset[0] in module axi_datamover_strb_gen2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port calc2wsc_calc_error in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr2wsc_fifo_empty in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_eop in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[25] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[24] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[23] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[22] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[21] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[20] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[19] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[18] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[17] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[16] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[15] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[14] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[13] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[12] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[11] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[10] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[9] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[8] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[7] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[6] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[5] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[4] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[3] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[2] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[1] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2wsc_bytes_rcvd[0] in module axi_datamover_wr_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port secondary_awclk in module axi_datamover_cmd_status is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_reset in module axi_datamover_cmd_status is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cache_data[7] in module axi_datamover_cmd_status is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cache_data[6] in module axi_datamover_cmd_status is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cache_data[5] in module axi_datamover_cmd_status is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cache_data[4] in module axi_datamover_cmd_status is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cache_data[3] in module axi_datamover_cmd_status is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cache_data[2] in module axi_datamover_cmd_status is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cache_data[1] in module axi_datamover_cmd_status is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cache_data[0] in module axi_datamover_cmd_status is either unconnected or has no load
+WARNING: [Synth 8-7129] Port secondary_awclk in module axi_datamover_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port secondary_aresetn in module axi_datamover_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[74] in module axi_datamover_s2mm_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[73] in module axi_datamover_s2mm_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[72] in module axi_datamover_s2mm_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[71] in module axi_datamover_s2mm_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_dbg_sel[3] in module axi_datamover_s2mm_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_dbg_sel[2] in module axi_datamover_s2mm_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_dbg_sel[1] in module axi_datamover_s2mm_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mstr2data_saddr_lsb[2] in module axi_datamover_rdmux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mstr2data_saddr_lsb[1] in module axi_datamover_rdmux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mstr2data_saddr_lsb[0] in module axi_datamover_rdmux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2addr_data_rdy in module axi_datamover_addr_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port calc2rsc_calc_error in module axi_datamover_rd_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr2rsc_calc_error in module axi_datamover_rd_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr2rsc_fifo_empty in module axi_datamover_rd_status_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mm2s_cmd_wdata[74] in module axi_datamover_mm2s_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mm2s_cmd_wdata[73] in module axi_datamover_mm2s_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mm2s_cmd_wdata[72] in module axi_datamover_mm2s_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mm2s_cmd_wdata[71] in module axi_datamover_mm2s_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mm2s_dbg_sel[3] in module axi_datamover_mm2s_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mm2s_dbg_sel[2] in module axi_datamover_mm2s_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mm2s_dbg_sel[1] in module axi_datamover_mm2s_full_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg2cntlr_sg_mode in module axi_cdma_simple_cntlr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mm2s2cntl_sts_tstrb[0] in module axi_cdma_simple_cntlr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm2cntl_sts_tstrb[0] in module axi_cdma_simple_cntlr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi2ip_wrce[15] in module axi_cdma_register is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2676.266 ; gain = 590.707 ; free physical = 1001 ; free virtual = 7924
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1886.298; parent = 1759.241; children = 127.060
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3650.348; parent = 2676.270; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2691.109 ; gain = 605.551 ; free physical = 1011 ; free virtual = 7936
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1886.298; parent = 1759.241; children = 127.060
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3665.191; parent = 2691.113; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2691.109 ; gain = 605.551 ; free physical = 1024 ; free virtual = 7951
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1886.298; parent = 1759.241; children = 127.060
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3665.191; parent = 2691.113; children = 974.078
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2691.109 ; gain = 0.000 ; free physical = 1080 ; free virtual = 8007
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_axi_cdma_0_0/OpenNTT_BD_axi_cdma_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_axi_cdma_0_0/OpenNTT_BD_axi_cdma_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_axi_cdma_0_0/OpenNTT_BD_axi_cdma_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_axi_cdma_0_0/OpenNTT_BD_axi_cdma_0_0.xdc] for cell 'U0'
+Parsing XDC File [/home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_axi_cdma_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_axi_cdma_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2800.859 ; gain = 0.000 ; free physical = 899 ; free virtual = 7838
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2800.859 ; gain = 0.000 ; free physical = 899 ; free virtual = 7838
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 656 ; free virtual = 7604
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1886.298; parent = 1759.241; children = 127.060
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 652 ; free virtual = 7600
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1886.298; parent = 1759.241; children = 127.060
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_axi_cdma_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 647 ; free virtual = 7595
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1886.298; parent = 1759.241; children = 127.060
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'sig_sm_state_reg' in module 'axi_cdma_simple_cntlr'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+             wait_for_go |                         00000010 |                              001
+               ld_dm_cmd |                         00000100 |                              010
+         get_mm2s_status |                         00001000 |                              011
+         get_s2mm_status |                         00010000 |                              100
+            score_status |                         00100000 |                              101
+               xfer_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_sm_state_reg' using encoding 'one-hot' in module 'axi_cdma_simple_cntlr'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+            wait_for_cmd |                         00000010 |                              001
+                  calc_1 |                         00000100 |                              010
+                  calc_2 |                         00001000 |                              011
+                  calc_3 |                         00010000 |                              100
+       wait_on_xfer_push |                         00100000 |                              101
+             chk_if_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_pcc_sm_state_reg' using encoding 'one-hot' in module 'axi_datamover_pcc'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+            wait_for_cmd |                         00000010 |                              001
+                  calc_1 |                         00000100 |                              010
+                  calc_2 |                         00001000 |                              011
+                  calc_3 |                         00010000 |                              100
+       wait_on_xfer_push |                         00100000 |                              101
+             chk_if_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_pcc_sm_state_reg' using encoding 'one-hot' in module 'axi_datamover_pcc__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 363 ; free virtual = 7318
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1886.298; parent = 1759.241; children = 127.060
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 4     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   3 Input    4 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 6     
+	   3 Input    3 Bit       Adders := 4     
++---Registers : 
+	               71 Bit    Registers := 2     
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 9     
+	               26 Bit    Registers := 2     
+	               16 Bit    Registers := 12    
+	                8 Bit    Registers := 19    
+	                6 Bit    Registers := 5     
+	                4 Bit    Registers := 22    
+	                3 Bit    Registers := 14    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 266   
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 7     
+	   2 Input   16 Bit        Muxes := 9     
+	   2 Input    9 Bit        Muxes := 2     
+	   8 Input    8 Bit        Muxes := 11    
+	   2 Input    8 Bit        Muxes := 34    
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   3 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 111   
+	   8 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3332] Sequential element (GEN_SIMPLE_MODE.I_SIMPLE_MODE_WRAP/I_SIMPLE_DMA_CNTLR/FSM_onehot_sig_sm_state_reg[7]) is unused and will be removed from module axi_cdma.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 836 ; free virtual = 7637
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1886.298; parent = 1759.241; children = 128.620
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 3539 ; free virtual = 10303
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1886.298; parent = 1759.241; children = 130.572
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 4797 ; free virtual = 11593
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1886.298; parent = 1759.241; children = 138.484
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 4837 ; free virtual = 11602
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1886.298; parent = 1759.241; children = 138.522
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 11742 ; free virtual = 18487
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1938.671; parent = 1782.461; children = 156.210
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 11742 ; free virtual = 18487
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1938.672; parent = 1782.470; children = 156.210
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 11718 ; free virtual = 18463
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1938.672; parent = 1782.556; children = 156.210
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 11718 ; free virtual = 18463
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1938.672; parent = 1782.607; children = 156.210
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 11718 ; free virtual = 18463
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1938.672; parent = 1782.607; children = 156.210
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 11718 ; free virtual = 18463
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1938.672; parent = 1782.607; children = 156.210
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+--------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                 | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+--------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | INFERRED_GEN.data_reg[3] | 59     | 59         | 59     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | INFERRED_GEN.data_reg[3] | 38     | 38         | 38     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | INFERRED_GEN.data_reg[5] | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | INFERRED_GEN.data_reg[5] | 7      | 7          | 7      | 0       | 0      | 0      | 0      | 
+|dsrl__4     | INFERRED_GEN.data_reg[3] | 36     | 36         | 36     | 0       | 0      | 0      | 0      | 
+|dsrl__6     | INFERRED_GEN.data_reg[5] | 7      | 7          | 7      | 0       | 0      | 0      | 0      | 
++------------+--------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    42|
+|2     |LUT1   |    13|
+|3     |LUT2   |   110|
+|4     |LUT3   |   228|
+|5     |LUT4   |   196|
+|6     |LUT5   |   159|
+|7     |LUT6   |   308|
+|8     |MUXF7  |    10|
+|9     |SRL16E |   149|
+|10    |FDRE   |  1134|
+|11    |FDSE   |    36|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 11718 ; free virtual = 18463
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1938.672; parent = 1782.607; children = 156.210
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3742.926; parent = 2768.848; children = 974.078
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 63 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 2800.859 ; gain = 605.551 ; free physical = 11761 ; free virtual = 18506
+Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 2800.859 ; gain = 715.301 ; free physical = 11761 ; free virtual = 18506
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2800.859 ; gain = 0.000 ; free physical = 11902 ; free virtual = 18647
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2800.859 ; gain = 0.000 ; free physical = 11641 ; free virtual = 18426
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 8a0d5bd6
+INFO: [Common 17-83] Releasing license: Synthesis
+136 Infos, 137 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:16 . Memory (MB): peak = 2800.859 ; gain = 1051.895 ; free physical = 11601 ; free virtual = 18386
+INFO: [Common 17-1381] The checkpoint '/home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_axi_cdma_0_0_synth_1/OpenNTT_BD_axi_cdma_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP OpenNTT_BD_axi_cdma_0_0, cache-ID = 25395aa8b1a1febd
+INFO: [Coretcl 2-1174] Renamed 60 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_axi_cdma_0_0_synth_1/OpenNTT_BD_axi_cdma_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file OpenNTT_BD_axi_cdma_0_0_utilization_synth.rpt -pb OpenNTT_BD_axi_cdma_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 25 14:42:00 2024...

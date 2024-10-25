@@ -1,0 +1,514 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Fri Oct 25 19:13:49 2024
+| Host         : ipd005 running 64-bit Ubuntu 20.04.6 LTS
+| Command      : report_drc -file OpenNTT_BD_wrapper_drc_routed.rpt -pb OpenNTT_BD_wrapper_drc_routed.pb -rpx OpenNTT_BD_wrapper_drc_routed.rpx
+| Design       : OpenNTT_BD_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 92
++-----------+----------+-------------------------+------------+
+| Rule      | Severity | Description             | Violations |
++-----------+----------+-------------------------+------------+
+| DPIP-1    | Warning  | Input pipelining        | 40         |
+| DPOP-2    | Warning  | MREG Output pipelining  | 48         |
+| PDCN-1569 | Warning  | LUT equation term check | 3          |
+| RTSTAT-10 | Warning  | No routable loads       | 1          |
++-----------+----------+-------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[0].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[0].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[0].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[0].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[1].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[1].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[1].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[1].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[2].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[2].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[2].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[2].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[3].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[3].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#8 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[3].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[3].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#9 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[4].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[4].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#10 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[4].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/modred_i/mr/genblk1[4].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#11 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[0].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[0].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#12 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[0].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[0].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#13 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[1].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[1].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#14 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[1].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[1].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#15 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[2].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[2].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[2].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[2].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#17 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[3].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[3].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#18 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[3].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[3].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#19 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[4].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[4].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#20 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[4].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/modred_i/mr/genblk1[4].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#21 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[0].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[0].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#22 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[0].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[0].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#23 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[1].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[1].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#24 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[1].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[1].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#25 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[2].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[2].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#26 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[2].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[2].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#27 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[3].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[3].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#28 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[3].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[3].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#29 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[4].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[4].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#30 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[4].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].modred_i/mr/genblk1[4].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#31 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[0].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[0].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#32 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[0].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[0].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#33 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[1].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[1].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#34 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[1].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[1].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#35 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[2].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[2].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#36 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[2].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[2].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#37 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[3].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[3].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#38 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[3].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[3].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#39 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[4].wsu/genblk1[0].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[4].wsu/genblk1[0].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#40 Warning
+Input pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[4].wsu/genblk1[1].imuu/m_delay_reg[0] input OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].modred_i/mr/genblk1[4].wsu/genblk1[1].imuu/m_delay_reg[0]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[0].p_product_reg[0] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[0].p_product_reg[0]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[1].p_product_reg[1] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[1].p_product_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[2].p_product_reg[2] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[2].p_product_reg[2]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[3].p_product_reg[3] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[3].p_product_reg[3]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#5 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[0].p_product_reg[4] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[0].p_product_reg[4]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#6 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[1].p_product_reg[5] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[1].p_product_reg[5]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#7 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[2].p_product_reg[6] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[2].p_product_reg[6]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#8 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[3].p_product_reg[7] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[3].p_product_reg[7]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#9 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[0].p_product_reg[8] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[0].p_product_reg[8]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#10 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[1].p_product_reg[9] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[1].p_product_reg[9]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#11 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[2].p_product_reg[10] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[2].p_product_reg[10]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#12 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[3].p_product_reg[11] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[0].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[3].p_product_reg[11]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#13 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[0].p_product_reg[0] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[0].p_product_reg[0]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#14 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[1].p_product_reg[1] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[1].p_product_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#15 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[2].p_product_reg[2] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[2].p_product_reg[2]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#16 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[3].p_product_reg[3] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[0].genblk1[3].p_product_reg[3]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#17 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[0].p_product_reg[4] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[0].p_product_reg[4]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#18 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[1].p_product_reg[5] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[1].p_product_reg[5]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#19 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[2].p_product_reg[6] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[2].p_product_reg[6]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#20 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[3].p_product_reg[7] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[1].genblk1[3].p_product_reg[7]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#21 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[0].p_product_reg[8] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[0].p_product_reg[8]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#22 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[1].p_product_reg[9] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[1].p_product_reg[9]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#23 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[2].p_product_reg[10] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[2].p_product_reg[10]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#24 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[3].p_product_reg[11] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/genblk8[1].btf/btf_modmul_i/intmul_i/genblk3[2].genblk1[3].p_product_reg[11]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#25 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[0].genblk1[0].p_product_reg[0] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[0].genblk1[0].p_product_reg[0]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#26 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[0].genblk1[1].p_product_reg[1] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[0].genblk1[1].p_product_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#27 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[0].genblk1[2].p_product_reg[2] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[0].genblk1[2].p_product_reg[2]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#28 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[0].genblk1[3].p_product_reg[3] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[0].genblk1[3].p_product_reg[3]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#29 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[1].genblk1[0].p_product_reg[4] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[1].genblk1[0].p_product_reg[4]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#30 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[1].genblk1[1].p_product_reg[5] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[1].genblk1[1].p_product_reg[5]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#31 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[1].genblk1[2].p_product_reg[6] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[1].genblk1[2].p_product_reg[6]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#32 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[1].genblk1[3].p_product_reg[7] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[1].genblk1[3].p_product_reg[7]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#33 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[2].genblk1[0].p_product_reg[8] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[2].genblk1[0].p_product_reg[8]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#34 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[2].genblk1[1].p_product_reg[9] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[2].genblk1[1].p_product_reg[9]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#35 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[2].genblk1[2].p_product_reg[10] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[2].genblk1[2].p_product_reg[10]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#36 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[2].genblk1[3].p_product_reg[11] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[0].intmul_i/genblk3[2].genblk1[3].p_product_reg[11]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#37 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[0].genblk1[0].p_product_reg[0] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[0].genblk1[0].p_product_reg[0]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#38 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[0].genblk1[1].p_product_reg[1] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[0].genblk1[1].p_product_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#39 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[0].genblk1[2].p_product_reg[2] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[0].genblk1[2].p_product_reg[2]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#40 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[0].genblk1[3].p_product_reg[3] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[0].genblk1[3].p_product_reg[3]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#41 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[1].genblk1[0].p_product_reg[4] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[1].genblk1[0].p_product_reg[4]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#42 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[1].genblk1[1].p_product_reg[5] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[1].genblk1[1].p_product_reg[5]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#43 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[1].genblk1[2].p_product_reg[6] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[1].genblk1[2].p_product_reg[6]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#44 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[1].genblk1[3].p_product_reg[7] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[1].genblk1[3].p_product_reg[7]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#45 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[2].genblk1[0].p_product_reg[8] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[2].genblk1[0].p_product_reg[8]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#46 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[2].genblk1[1].p_product_reg[9] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[2].genblk1[1].p_product_reg[9]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#47 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[2].genblk1[2].p_product_reg[10] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[2].genblk1[2].p_product_reg[10]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#48 Warning
+MREG Output pipelining  
+DSP OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[2].genblk1[3].p_product_reg[11] multiplier stage OpenNTT_BD_i/ComputeCoreWrapper_0/inst/CORE/open_ntt/ntt_core/tw_gen/dif_rn/genblk4[1].intmul_i/genblk3[2].genblk1[3].p_product_reg[11]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+PDCN-1569#1 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A6)+((~A6)*(~A5)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#2 Warning
+LUT equation term check  
+Used physical LUT pin 'A4' of cell OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A2)+((~A2)*(~A5)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#3 Warning
+LUT equation term check  
+Used physical LUT pin 'A6' of cell OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A2)+((~A2)*(~A5)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+35 net(s) have no routable loads. The problem bus(es) and/or net(s) are OpenNTT_BD_i/axi_cdma_0/U0/GEN_SIMPLE_MODE.I_SIMPLE_MODE_WRAP/GEN_DM_FULL.I_DATAMOVER_FULL/n_0_0,
+OpenNTT_BD_i/axi_cdma_0/U0/GEN_SIMPLE_MODE.I_SIMPLE_MODE_WRAP/GEN_DM_FULL.I_DATAMOVER_FULL/n_0_1,
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb,
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i,
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0],
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0],
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb,
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0],
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0],
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb,
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0],
+OpenNTT_BD_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0]
+ (the first 15 of 23 listed nets/buses).
+Related violations: <none>
+
+

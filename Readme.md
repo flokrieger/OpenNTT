@@ -1,4 +1,32 @@
 # OpenNTT
+This repository provides the source code for OpenNTT - an automated toolchain for compiling high-performance NTT hardware accelerators. 
+You can find the accompanying paper [here](https://eprint.iacr.org/2024/1740).
 
-We will release the source code of OpenNTT soon.
+A detailed manual for the tool will follow soon.
 
+## Contributors
+Florian Krieger  -  `florian.krieger (at) iaik.tugraz.at`
+
+Florian Hirner  -  `florian.hirner (at) iaik.tugraz.at`
+
+Ahmet Can Mert  -  `ahmet.mert (at) iaik.tugraz.at`
+
+Sujoy Sinha Roy  -  `sujoy.sinharoy (at) iaik.tugraz.at`
+
+-----
+
+[Institute of Applied Information Processing and Communications](https://www.iaik.tugraz.at/), Graz University of Technology, Austria
+
+-----
+
+If you use Aloha-HE in your research/study, please cite our work:
+
+```
+@misc{OpenNTT
+      author = {Florian Krieger and Florian Hirner and Ahmet Can Mert and Sujoy Sinha Roy},
+      title = {{OpenNTT}: An Automated Toolchain for Compiling High-Performance {NTT} Accelerators in {FHE}},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2024/1740},
+      year = {2024},
+      url = {https://eprint.iacr.org/2024/1740}
+}
+```
