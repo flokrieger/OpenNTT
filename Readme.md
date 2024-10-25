@@ -4,6 +4,16 @@ You can find the accompanying paper [here](https://eprint.iacr.org/2024/1740).
 
 A detailed manual for the tool will follow soon.
 
+## Our used setup
+
+- Python 3.10 or newer
+- Vivado and Vitis 2022.2
+- Ubuntu 22.04.5 LTS
+
+If you want to run OpenNTT using our provided PYNQ-Z2 setup, you additionally need:
+- Cable drivers installed for Vivado and Vitis
+- PYNQ-Z2 FPGA Development Board with Xilinx part number xc7z020clg400-1
+
 ## Contributors
 Florian Krieger  -  `florian.krieger (at) iaik.tugraz.at`
 
@@ -19,7 +29,7 @@ Sujoy Sinha Roy  -  `sujoy.sinharoy (at) iaik.tugraz.at`
 
 -----
 
-If you use Aloha-HE in your research/study, please cite our work:
+If you use OpenNTT in your research/study, please consider citing our work:
 
 ```
 @misc{OpenNTT
