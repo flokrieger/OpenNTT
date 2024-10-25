@@ -2,6 +2,9 @@
 This repository provides the source code for OpenNTT - an automated toolchain for compiling high-performance NTT hardware accelerators. 
 You can find the accompanying paper [here](https://eprint.iacr.org/2024/1740).
 
+All content of this repo is for academic research use only. It does not come with any support, warranty, or responsibility.
+
+
 A detailed manual for the tool will follow soon.
 
 ## Our used setup
