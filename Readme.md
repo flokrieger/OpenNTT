@@ -100,17 +100,17 @@ If you want to run OpenNTT using our provided PYNQ-Z2 setup, you additionally ne
 - PYNQ-Z2 FPGA Development Board with Xilinx part number xc7z020clg400-1
 
 ## Contributors
-Florian Krieger  -  `florian.krieger (at) iaik.tugraz.at`
+Florian Krieger  -  `florian.krieger (at) tugraz.at`
 
-Florian Hirner  -  `florian.hirner (at) iaik.tugraz.at`
+Florian Hirner  -  `florian.hirner (at) tugraz.at`
 
-Ahmet Can Mert  -  `ahmet.mert (at) iaik.tugraz.at`
+Ahmet Can Mert  -  `ahmet.mert (at) tugraz.at`
 
-Sujoy Sinha Roy  -  `sujoy.sinharoy (at) iaik.tugraz.at`
+Sujoy Sinha Roy  -  `sujoy.sinharoy (at) tugraz.at`
 
 -----
 
-[Institute of Applied Information Processing and Communications](https://www.iaik.tugraz.at/), Graz University of Technology, Austria
+[Institute of Information Security](https://www.isec.tugraz.at/), Graz University of Technology, Austria
 
 -----
 
