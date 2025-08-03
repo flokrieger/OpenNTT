@@ -160,7 +160,6 @@ void receive64(uint64_t *p, uint32_t num_words, uint32_t bram_sel)
 	uint32_t i;
 
 	uint32_t address_ext;
-	uint32_t wea_ext = 0;
 	uint32_t control_low = 0;
 	uint32_t dina_low=0, dina_high=0;
 

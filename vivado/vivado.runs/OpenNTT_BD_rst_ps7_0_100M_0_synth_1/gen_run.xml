@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="OpenNTT_BD_rst_ps7_0_100M_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1729860013">
-  <File Type="RDS-RDS" Name="OpenNTT_BD_rst_ps7_0_100M_0.vds"/>
-  <File Type="REPORTS-TCL" Name="OpenNTT_BD_rst_ps7_0_100M_0_reports.tcl"/>
-  <File Type="PA-TCL" Name="OpenNTT_BD_rst_ps7_0_100M_0.tcl"/>
   <File Type="RDS-DCP" Name="OpenNTT_BD_rst_ps7_0_100M_0.dcp"/>
-  <File Type="RDS-UTIL" Name="OpenNTT_BD_rst_ps7_0_100M_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="OpenNTT_BD_rst_ps7_0_100M_0_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="OpenNTT_BD_rst_ps7_0_100M_0.tcl"/>
+  <File Type="RDS-UTIL" Name="OpenNTT_BD_rst_ps7_0_100M_0_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="OpenNTT_BD_rst_ps7_0_100M_0_reports.tcl"/>
+  <File Type="RDS-RDS" Name="OpenNTT_BD_rst_ps7_0_100M_0.vds"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/OpenNTT_BD_rst_ps7_0_100M_0">
     <File Path="$PSRCDIR/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_rst_ps7_0_100M_0/OpenNTT_BD_rst_ps7_0_100M_0.xci">
       <FileInfo>

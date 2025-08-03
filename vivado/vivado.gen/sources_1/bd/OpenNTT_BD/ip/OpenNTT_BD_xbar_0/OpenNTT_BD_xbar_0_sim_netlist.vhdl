@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Fri Oct 25 14:41:48 2024
+-- Date        : Fri Oct 25 14:41:47 2024
 -- Host        : ipn070 running 64-bit Ubuntu 22.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_xbar_0/OpenNTT_BD_xbar_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top OpenNTT_BD_xbar_0 -prefix
+--               OpenNTT_BD_xbar_0_ OpenNTT_BD_xbar_0_sim_netlist.vhdl
 -- Design      : OpenNTT_BD_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -49,8 +49,6 @@ entity OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_addr_arbiter is
     \gen_single_thread.s_avalid_en\ : in STD_LOGIC;
     \gen_no_arbiter.m_valid_i_reg_inv_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_addr_arbiter : entity is "axi_crossbar_v2_1_28_addr_arbiter";
 end OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_addr_arbiter;
 
 architecture STRUCTURE of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_addr_arbiter is
@@ -1773,8 +1771,6 @@ entity OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_decerr_slave is
     aa_mi_awtarget_hot : in STD_LOGIC_VECTOR ( 0 to 0 );
     mi_awvalid_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_decerr_slave : entity is "axi_crossbar_v2_1_28_decerr_slave";
 end OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_decerr_slave;
 
 architecture STRUCTURE of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_decerr_slave is
@@ -2333,8 +2329,6 @@ entity OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_si_transactor is
     st_mr_rlast : in STD_LOGIC_VECTOR ( 2 downto 0 );
     D : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_si_transactor : entity is "axi_crossbar_v2_1_28_si_transactor";
 end OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_si_transactor;
 
 architecture STRUCTURE of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_si_transactor is
@@ -3675,8 +3669,6 @@ entity OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_splitter is
     aresetn_d : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_splitter : entity is "axi_crossbar_v2_1_28_splitter";
 end OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_splitter;
 
 architecture STRUCTURE of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_splitter is
@@ -3855,8 +3847,6 @@ entity OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_ndeep_srl is
     D : in STD_LOGIC_VECTOR ( 2 downto 0 );
     match : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_ndeep_srl : entity is "axi_data_fifo_v2_1_26_ndeep_srl";
 end OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_ndeep_srl;
 
 architecture STRUCTURE of OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_ndeep_srl is
@@ -8677,8 +8667,6 @@ entity OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_axic_reg_srl_fifo is
     \gen_axi.s_axi_bvalid_i_reg\ : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_axic_reg_srl_fifo : entity is "axi_data_fifo_v2_1_26_axic_reg_srl_fifo";
 end OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_axic_reg_srl_fifo;
 
 architecture STRUCTURE of OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_axic_reg_srl_fifo is
@@ -9100,8 +9088,6 @@ entity OpenNTT_BD_xbar_0_axi_register_slice_v2_1_27_axi_register_slice is
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of OpenNTT_BD_xbar_0_axi_register_slice_v2_1_27_axi_register_slice : entity is "axi_register_slice_v2_1_27_axi_register_slice";
 end OpenNTT_BD_xbar_0_axi_register_slice_v2_1_27_axi_register_slice;
 
 architecture STRUCTURE of OpenNTT_BD_xbar_0_axi_register_slice_v2_1_27_axi_register_slice is
@@ -9335,8 +9321,6 @@ entity OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_wdata_router is
     \gen_axi.s_axi_bvalid_i_reg\ : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_wdata_router : entity is "axi_crossbar_v2_1_28_wdata_router";
 end OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_wdata_router;
 
 architecture STRUCTURE of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_wdata_router is
@@ -9406,8 +9390,6 @@ entity OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_crossbar is
     m_axi_awready : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_crossbar : entity is "axi_crossbar_v2_1_28_crossbar";
 end OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_crossbar;
 
 architecture STRUCTURE of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_crossbar is
@@ -10133,8 +10115,6 @@ entity OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is "axi_crossbar_v2_1_28_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

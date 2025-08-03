@@ -13,7 +13,6 @@
 */
 
 `default_nettype wire
-`include "dsp_size.svh"
 module intmul #
 (
     parameter LOG_A = 0,      
@@ -36,8 +35,8 @@ module intmul #
 			intmul_custom(clk,A,B,C); // CHANGE NAME\INTERFACE if YOU USE CUSTOM UNIT
 		end
 		else if(INTMUL_TYPE == "fpga_auto" || INTMUL_TYPE == "fpga_lut" || INTMUL_TYPE == "fpga_dsp") begin
-			localparam A_W_SIZE = `DSP_PORT_SIZE_A; // word size for A
-			localparam B_W_SIZE = `DSP_PORT_SIZE_B; // word size for B
+			localparam A_W_SIZE = intmul_pkg::DSP_PORT_SIZE_A; // word size for A
+			localparam B_W_SIZE = intmul_pkg::DSP_PORT_SIZE_B; // word size for B
 			localparam A_SIZE = $rtoi($ceil((1.0*LOG_A)/(1.0*A_W_SIZE))); // number of chunks for A
 			localparam B_SIZE = $rtoi($ceil((1.0*LOG_B)/(1.0*B_W_SIZE))); // number of chunks for B
 

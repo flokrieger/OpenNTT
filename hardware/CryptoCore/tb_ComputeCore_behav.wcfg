@@ -5,21 +5,23 @@
    <db_ref_list>
       <db_ref path="tb_ComputeCore_behav.wdb" id="1">
          <top_modules>
+            <top_module name="FLP_pkg" />
             <top_module name="glbl" />
+            <top_module name="open_ntt_pkg" />
             <top_module name="tb_ComputeCore" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="61,310.500 ns"></ZoomStartTime>
-      <ZoomEndTime time="61,437.101 ns"></ZoomEndTime>
-      <Cursor1Time time="61,416.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="127.400001 us"></ZoomEndTime>
+      <Cursor1Time time="19.326000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="241"></NameColumnWidth>
-      <ValueColumnWidth column_width="125"></ValueColumnWidth>
+      <ValueColumnWidth column_width="121"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="25" />
    <wvobject type="array" fp_name="/tb_ComputeCore/LOGN">
       <obj_property name="ElementShortName">LOGN[31:0]</obj_property>
       <obj_property name="ObjectShortName">LOGN[31:0]</obj_property>
@@ -57,8 +59,8 @@
       <obj_property name="ObjectShortName">poly_select[31:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_ComputeCore/rom_base_addr">
-      <obj_property name="ElementShortName">rom_base_addr[3:0]</obj_property>
-      <obj_property name="ObjectShortName">rom_base_addr[3:0]</obj_property>
+      <obj_property name="ElementShortName">rom_base_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_base_addr[4:0]</obj_property>
    </wvobject>
    <wvobject fp_name="divider163" type="divider">
       <obj_property name="label">DMA interface</obj_property>
@@ -79,5 +81,45 @@
    <wvobject type="array" fp_name="/tb_ComputeCore/dma_bram_dina">
       <obj_property name="ElementShortName">dma_bram_dina[63:0]</obj_property>
       <obj_property name="ObjectShortName">dma_bram_dina[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider163" type="divider">
+      <obj_property name="label">Params</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ComputeCore/q">
+      <obj_property name="ElementShortName">q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">q[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ComputeCore/R">
+      <obj_property name="ElementShortName">R[31:0]</obj_property>
+      <obj_property name="ObjectShortName">R[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ComputeCore/R_inv">
+      <obj_property name="ElementShortName">R_inv[31:0]</obj_property>
+      <obj_property name="ObjectShortName">R_inv[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider163" type="divider">
+      <obj_property name="label">OpenNTT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ComputeCore/dut/CORE/open_ntt/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ComputeCore/dut/CORE/open_ntt/forward">
+      <obj_property name="ElementShortName">forward</obj_property>
+      <obj_property name="ObjectShortName">forward</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ComputeCore/dut/CORE/open_ntt/opcode">
+      <obj_property name="ElementShortName">opcode[1:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ComputeCore/dut/CORE/open_ntt/q">
+      <obj_property name="ElementShortName">q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">q[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ComputeCore/dut/CORE/open_ntt/montgomery_factor">
+      <obj_property name="ElementShortName">montgomery_factor[31:0]</obj_property>
+      <obj_property name="ObjectShortName">montgomery_factor[31:0]</obj_property>
    </wvobject>
 </wave_config>

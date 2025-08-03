@@ -4,10 +4,13 @@
     Contact: florian.krieger@iaik.tugraz.at
 */
 `timescale 1ns/1ps
-`include "package.svh"
 
-// Parametric twiddle factor generation for DIT RN NTT
-module TwiddleGen_DIT_RN #(
+// Parametric twiddle factor generation for MemOpt DIT RN transformations
+module TwiddleGen_DIT_RN 
+  import FLP_pkg::*;
+  #(
+  parameter NTT = 1,
+
   parameter LOGQ = 0,
   parameter LOGN = 0,
   parameter PE = 2,
@@ -45,13 +48,14 @@ module TwiddleGen_DIT_RN #(
 );
 
   localparam N = 1<<LOGN;
-  localparam MUL_LAT = INTMUL_LAT + MODRED_LAT;
+  localparam MUL_LAT = NTT ? INTMUL_LAT + MODRED_LAT : DELAY_COMPLEX_MULT;
   localparam MODMUL_LAT_CEIL = MUL_LAT == 4 || MUL_LAT == 8 || MUL_LAT == 16 ? 2<<$clog2(MUL_LAT) : 1<<$clog2(MUL_LAT);
   if(MUL_LAT <= 1 || (MODMUL_LAT_CEIL != 4 && MODMUL_LAT_CEIL != 8 && MODMUL_LAT_CEIL != 16 && MODMUL_LAT_CEIL != 32)) $error("Invalid modred latency\n");
   localparam SPECIAL_STAGE = LOGN - $clog2(PE) - $clog2(MODMUL_LAT_CEIL);
   
-  localparam TW_ROM_DEPTH = `ROM_ADDR_WIDTH;
-  localparam string rom_filename = $sformatf("%s/tool/RomContent/twiddle_mem_DIT_RN_n%0d_pe%0d_lat%0d_MontRed_0.mem", `OPEN_NTT_PATH, 1<<LOGN, PE, MODMUL_LAT_CEIL);
+  localparam TW_ROM_DEPTH = open_ntt_pkg::ROM_ADDR_WIDTH;
+  localparam string rom_filename = NTT ? $sformatf("%s/tool/RomContent/twiddle_mem_DIT_RN_n%0d_pe%0d_lat%0d_MontRed_0.mem", open_ntt_pkg::OPEN_NTT_PATH, 1<<LOGN, PE, MODMUL_LAT_CEIL) : 
+                                         $sformatf("%s/tool/RomContent/twiddle_mem_DIT_RN_n%0d_pe%0d_lat%0d_FFT_0.mem",     open_ntt_pkg::OPEN_NTT_PATH, 1<<LOGN, PE, MODMUL_LAT_CEIL);
 
   if (N/2/PE <= 2* MODMUL_LAT_CEIL)
     $error("Invalid MODMUL_LAT_CEIL");
@@ -200,11 +204,22 @@ module TwiddleGen_DIT_RN #(
 
       logic [LOGQ-1:0] modmul_out;
       if(INSTANTIATE_MODMULT) begin
-        logic [2*LOGQ-1:0] imul;
-        logic [LOGQ-1:0] q_reg;
-        shiftreg #(.DELAY(2), .LOGQ(LOGQ)) sr_q (.clk(clk),.data_in(q),.data_out(q_reg));
-        intmul #(LOGQ,LOGQ,INTMUL_LAT,INTMUL_TYPE) intmul_i(clk,modmul_in[g],modmul_omega_in[g],imul);
-        modred #(LOGQ,Q_VALUE,WORD_SIZE,MODRED_LAT,MODRED_TYPE,MODRED_L,MODRED_COREMUL_LAT) modred_i(clk,imul,q_reg,modmul_out);
+        if(NTT) begin
+          logic [2*LOGQ-1:0] imul;
+          logic [LOGQ-1:0] q_reg;
+          shiftreg #(.DELAY(2), .LOGQ(LOGQ)) sr_q (.clk(clk),.data_in(q),.data_out(q_reg));
+          intmul #(LOGQ,LOGQ,INTMUL_LAT,INTMUL_TYPE) intmul_i(clk,modmul_in[g],modmul_omega_in[g],imul);
+          modred #(LOGQ,Q_VALUE,WORD_SIZE,MODRED_LAT,MODRED_TYPE,MODRED_L,MODRED_COREMUL_LAT) modred_i(clk,imul,q_reg,modmul_out);
+        end else begin
+          ComplexMultiplier cmul (
+            .clk(clk),
+            .start(),
+            .a(modmul_in[g]),
+            .b(modmul_omega_in[g]),
+            .c(modmul_out),
+            .done()
+          );
+        end
       end else begin
         assign modmul_a[g] = modmul_in[g];
         assign modmul_b[g] = modmul_omega_in[g];

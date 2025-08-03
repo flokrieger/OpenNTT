@@ -1,44 +1,46 @@
 # OpenNTT
-This repository provides the source code for OpenNTT - An automated toolchain for compiling high-performance NTT hardware accelerators. 
-You can find the accompanying paper [here](https://eprint.iacr.org/2024/1740).
+This repository provides the source code for OpenNTT - An automated toolchain for compiling high-performance NTT and FFT hardware accelerators. The updated version of OpenNTT allows choosing between low-memory optimized (MemOpt) and enhanced frequency (RoutOpt) designs.
+You can find all details about OpenNTT in the accompanying conference paper [here](https://dl.acm.org/doi/10.1145/3676536.3697123) and the more recent journal paper [here](https://eprint.iacr.org/2025/1407).
 
 This repo contains:
-- The OpenNTT tool to compile NTT hardware designs
+- The OpenNTT tool to compile NTT and FFT hardware designs
 - Simulation-based testing functionality using Xilinx Vivado
-- Ready-to-use Xilinx Vitis project to run OpenNTT on a PYNQ-Z2 FPGA 
+- Ready-to-use Xilinx Vitis project to run OpenNTT designs on a PYNQ-Z2 FPGA 
 
 All content of this repo is for academic research use only. It does not come with any support, warranty, or responsibility.
 
-## Using OpenNTT to compile NTT hardware
+## Using OpenNTT to compile NTT and FFT hardware
 1) Clone this repo and navigate to the `/tool` folder
 2) You find the file `openntt.py`, which is the top file for the tool. Run `python3 openntt.py` with the desired configuration. This table gives an overview of configuration parameters:
 
     |  Parameter  |  Values  |  Description  |
     | --- | --- | --- |
     | `--c`   | 0/1   | Clear output products   |
-    | `--ntt_type`   | fntt_dit_nr   | forward NTT, decimation in time, normal to reverse    |
-    | | fntt_dif_nr | forward NTT, decimation in frequency, normal to reverse | 
-    | | intt_dit_rn | inverse NTT, decimation in time, reverse to normal  | 
-    | | intt_dif_rn | inverse NTT, decimation in frequency, reverse to normal | 
-    | | mfntt_dit_nr | forward NTT with merged preprocessing, decimation in time, normal to reverse | 
-    | | mintt_dif_rn | inverse NTT with merged preprocessing, decimation in frequency, reverse to normal | 
-    | | fntt_dit_nr-intt_dit_rn | unified NTT as above | 
-    | | mfntt_dit_nr-mintt_dif_rn |unified NTT as above | 
+    | `--transf_type` | NTT or FFT | Select NTT or FFT transformation | 
+    | `--memory_opt` | 0/1 | Choose between MemOpt (1) or RoutOpt (0) |
+    | `--ntt_type`   | fntt_dit_nr   | forward NTT/FFT, decimation in time, normal to reverse    |
+    | | fntt_dif_nr | forward NTT/FFT, decimation in frequency, normal to reverse | 
+    | | intt_dit_rn | inverse NTT/FFT, decimation in time, reverse to normal  | 
+    | | intt_dif_rn | inverse NTT/FFT, decimation in frequency, reverse to normal | 
+    | | mfntt_dit_nr | forward NTT/FFT with merged preprocessing, decimation in time, normal to reverse | 
+    | | mintt_dif_rn | inverse NTT/FFT with merged preprocessing, decimation in frequency, reverse to normal | 
+    | | fntt_dit_nr-intt_dit_rn | unified NTT/FFT as above | 
+    | | mfntt_dit_nr-mintt_dif_rn |unified NTT/FFT as above | 
     | `--n`   | power of two   | Polynomial degree   |
-    | `--q_fixed`   | 0/1   | Use fixed prime   |
-    | `--q_count`   | >0   | Number of primes   |
-    | `--q_list`   | >0, prime   | comma-separated list of primes or prime sizes. Values <= 64 are considered prime sizes, others as primes  |
-    | `--tw_list`   | optional   | comma-separated list of roots of unity (one for each prime)   |
-    | `--tw_inv_list`   | optional   | comma-separated list of inverse roots of unity (one for each prime)   |
+    | `--q_fixed`   | 0/1   | Use fixed prime (NTT only)   |
+    | `--q_count`   | >0   | Number of primes (NTT only)   |
+    | `--q_list`   | >0, prime   | comma-separated list of primes or prime sizes. Values <= 64 are considered prime sizes, others as primes (NTT only)  |
+    | `--tw_list`   | optional   | comma-separated list of roots of unity (one for each prime, NTT only)   |
+    | `--tw_inv_list`   | optional   | comma-separated list of inverse roots of unity (one for each prime, NTT only)   |
     | `--io_band`   | power of two   | number of memory ports (= 2 x Nr of processing elements)   |
     | `--mem_depth`   | >0   | number of polynomial slots in memory   |
     | `--coeff_arith`   | 0/1   | Instantiate coefficient-wise Mult/Add/Sub functionality   |
 
 **Example:**
 
-`python3 openntt.py --ntt_type=mfntt_dit_nr-mintt_dif_rn  --q_count=1 --q_list=32 --n=4096 --io_band=8 --c=1 --mem_depth=2 --coeff_arith=1`
+`python3 openntt.py --transf_type=NTT --memory_opt=0 --ntt_type=mfntt_dit_nr-mintt_dif_rn  --q_count=1 --q_list=32 --n=4096 --io_band=8 --c=1 --mem_depth=2 --coeff_arith=1`
 
-This generates hardware support with merged forward NTT, decimation in time, normal to reverse and merged inverse NTT decimation in frequency, reversed to normal. The tool automatically generates one prime with 32 bits. The polynomial degree is 4096 and 4 processing elements are instantiated. Output products are cleared, two polynomial slots are instantiated and coefficient arithmetic is supported.
+This generates hardware support with merged forward NTT, decimation in time, normal to reverse and merged inverse NTT decimation in frequency, reversed to normal. Forward and inverse transformation use RoutOpt. The tool automatically generates one prime with 32 bits. The polynomial degree is 4096 and 4 processing elements are instantiated. Output products are cleared, two polynomial slots are instantiated and coefficient arithmetic is supported.
 
 ## Simulation-based testing in Vivado
 After generating the NTT hardware as above, you can use the prepared Vivado 2022.2 project to simulate the design. For that, follow these steps:
@@ -81,7 +83,7 @@ This repo also contains the functionality for running the NTT design on a ZYNQ-Z
 9) In Vitis, within the OpenNTT_App, copy the file `software/lscript.ld` to `src/` and replace the existing file
 10) Build the application project
 11) Start a terminal monitoring the UART output of the PYNQ-Z2 board
-  - e.g.: `sudo screen /dev/serial/by-id/usb-Xilinx_TUL_1234-tul-if01-port0 115200,cs8,-parenb,-cstopb,-hupclsudo screen /dev/serial/by-id/usb-Xilinx_TUL_1234-tul-if01-port0 115200,cs8,-parenb,-cstopb,-hupcl`
+  - e.g.: `sudo screen /dev/serial/by-id/usb-Xilinx_TUL_1234-tul-if01-port0 115200,cs8,-parenb,-cstopb,-hupcl`
 11) In Vitis, right-click on OpenNTT_App and select *Run As -> Launch on Hardware*. This will run testcases on the FPGA and verify the correct output of the design. If everything worked well, the UART port will show:
 ```
 #################################
@@ -117,11 +119,29 @@ Sujoy Sinha Roy  -  `sujoy.sinharoy (at) tugraz.at`
 If you use OpenNTT in your research/study, please consider citing our work:
 
 ```
-@misc{OpenNTT
+@inproceedings{10.1145/3676536.3697123,
+  author = {Krieger, Florian and Hirner, Florian and Mert, Ahmet Can and Sinha Roy, Sujoy},
+  title = {OpenNTT - An Automated Toolchain for Compiling High-Performance NTT Accelerators in FHE},
+  year = {2025},
+  isbn = {9798400710773},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3676536.3697123},
+  doi = {10.1145/3676536.3697123},
+  booktitle = {Proceedings of the 43rd IEEE/ACM International Conference on Computer-Aided Design},
+  articleno = {13},
+  numpages = {9},
+  keywords = {hardware design tool, NTT, twiddle factor generation, FHE},
+  location = {Newark Liberty International Airport Marriott, New York, NY, USA},
+  series = {ICCAD '24}
+}
+
+@misc{cryptoeprint:2025/1407,
       author = {Florian Krieger and Florian Hirner and Ahmet Can Mert and Sujoy Sinha Roy},
-      title = {{OpenNTT}: An Automated Toolchain for Compiling High-Performance {NTT} Accelerators in {FHE}},
-      howpublished = {Cryptology {ePrint} Archive, Paper 2024/1740},
-      year = {2024},
-      url = {https://eprint.iacr.org/2024/1740}
+      title = {A Flexible Hardware Design Tool for Fast Fourier and Number-Theoretic Transformation Architectures},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2025/1407},
+      year = {2025},
+      doi = {10.1109/TCAD.2025.3595834},
+      url = {https://eprint.iacr.org/2025/1407}
 }
 ```

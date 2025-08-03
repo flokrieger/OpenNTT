@@ -28,7 +28,6 @@
 // else:
 //     Not defined 
 
-`include "dsp_size.svh"
 `define max(x,y) ((x) > (y) ? (x) : (y))
 
 module wlmont_sub_p0
@@ -46,7 +45,7 @@ module wlmont_sub_p0
     output reg[LOGTo -1:0] To
 );
 
-localparam DSP_SIZE_A = `DSP_PORT_SIZE_A;
+localparam DSP_SIZE_A = intmul_pkg::DSP_PORT_SIZE_A;
 
 // parameters
 localparam LOGqH = LOGQ-W;

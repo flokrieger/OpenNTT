@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/fkrieger/Desktop/openNTT/vivado/vivado.runs/OpenNTT_BD_xbar_0_synth_1'
+HD_PWD='/home/fkrieger/Documents/Projects/openNTT/OpenNTT_Github/vivado/vivado.runs/OpenNTT_BD_xbar_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

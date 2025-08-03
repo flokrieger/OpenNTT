@@ -4,21 +4,24 @@
     Contact: florian.krieger@iaik.tugraz.at
 */
 `timescale 1ns/1ps
-`include "package.svh"
 
 // Top module for OpenNTT. Combines NTTCore and RAM Memory.
 
-module OpenNTT #(
-    parameter LOGQ = `LOGQ,
-    parameter LOGN = `LOGN,
-    parameter PE = `PE,
+module OpenNTT 
+  import FLP_pkg::*;
+  #(
+    parameter NTT = open_ntt_pkg::NTT, // 1: NTT, 0: FFT
+    
+    parameter LOGQ = open_ntt_pkg::LOGQ,
+    parameter LOGN = open_ntt_pkg::LOGN,
+    parameter PE = open_ntt_pkg::PE,
 
-    parameter NTT_TYPE = `NTT_TYPE, // standalones: fntt_dit_nr, fntt_dif_nr, intt_dit_rn, intt_dif_rn, mfntt_dit_nr, mintt_dif_rn
+    parameter NTT_TYPE = open_ntt_pkg::NTT_TYPE, // standalones: fntt_dit_nr, fntt_dif_nr, intt_dit_rn, intt_dif_rn, mfntt_dit_nr, mintt_dif_rn
                                     // unifieds:    fntt_dit_nr-intt_dit_rn, mfntt_dit_nr-mintt_dif_rn
-    parameter INSTANTIATE_MULT_ADD = `INSTANTIATE_MULT_ADD, // 1: support polynomial addition / multiplication etc.
+    parameter INSTANTIATE_MULT_ADD = open_ntt_pkg::INSTANTIATE_MULT_ADD, // 1: support polynomial addition / multiplication etc.
 
-    parameter [LOGQ-1:0] Q_VALUE = `Q_VALUE, // != 0: q is constant  
-    parameter WORD_SIZE = `WORD_SIZE, // Last WORD_SIZE digit of q will be 00...001
+    parameter [LOGQ-1:0] Q_VALUE = open_ntt_pkg::Q_VALUE, // != 0: q is constant  
+    parameter WORD_SIZE = open_ntt_pkg::WORD_SIZE, // Last WORD_SIZE digit of q will be 00...001
     
     parameter MODADD_LAT = 2, // options: 0, 1 or 2 (Latency for ADD/SUB)
     
@@ -29,14 +32,15 @@ module OpenNTT #(
     parameter MODRED_LAT = 1, // ignored for "default" (WL Montgomery) 
     parameter MODRED_COREMUL_LAT = 1, // latency of multiply and add units in WL Montgomery	, only used in "default" (WL Montgomery) 
 
+    parameter MEMORY_OPTIMIZED = open_ntt_pkg::MEMORY_OPTIMIZED, // either memory optimized (1) our routing optimized (0)
     parameter TW_ROM_MEM_TYPE = "fpga_block", // options: "xpm_block", "xpm_distributed", "xpm_auto", "xpm_ultra,  
                                               //          "fpga_block", "fpga_ultra", "fpga_distributed", "" (i.e., sim), "custom" (i.e., asic)
     
-    parameter NUM_POLY_MEMS = `NUM_POLY_MEMS,   // number of polynomials we can store in memory
+    parameter NUM_POLY_MEMS = open_ntt_pkg::NUM_POLY_MEMS,   // number of polynomials we can store in memory
     parameter RAM_MEM_TYPE = "fpga_block", // options: "xpm_block", "xpm_distributed", "xpm_auto", "xpm_ultra,  
                                            //          "fpga_block", "fpga_ultra", "fpga_distributed", "" (i.e., sim), "custom" (i.e., asic)
 
-    parameter ROM_ADDR_WIDTH = `ROM_ADDR_WIDTH,
+    parameter ROM_ADDR_WIDTH = open_ntt_pkg::ROM_ADDR_WIDTH,
     parameter RAM_RD_LAT = 2,
     parameter ROM_RD_LAT = 2
   ) 
@@ -134,18 +138,20 @@ module OpenNTT #(
 
   // ntt core instance:
   NTTCore #(
+    .NTT(NTT),
     .LOGQ(LOGQ),
     .LOGN(LOGN),
     .PE(PE),
     .NTT_TYPE(NTT_TYPE),
     .Q_VALUE(Q_VALUE),
     .WORD_SIZE(WORD_SIZE),
-    .ADD_LAT(MODADD_LAT),
+    .ADD_LAT(NTT ? MODADD_LAT : DELAY_FLP_ADDER),
     .INTMUL_LAT(INTMUL_LAT),
     .INTMUL_TYPE(INTMUL_TYPE),
     .MODRED_TYPE(MODRED_TYPE),
     .MODRED_LAT(MODRED_LAT),
     .MODRED_COREMUL_LAT(MODRED_COREMUL_LAT),
+    .MEMORY_OPTIMIZED(MEMORY_OPTIMIZED),
     .TW_ROM_MEM_TYPE(TW_ROM_MEM_TYPE),
     .ROM_ADDR_WIDTH(ROM_ADDR_WIDTH),
     .INSTANTIATE_MULT_ADD(INSTANTIATE_MULT_ADD),

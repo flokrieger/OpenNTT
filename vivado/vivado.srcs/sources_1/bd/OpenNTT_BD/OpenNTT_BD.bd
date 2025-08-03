@@ -2922,6 +2922,10 @@
                 "value": "AXI4LITE",
                 "value_src": "constant"
               },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
               "ID_WIDTH": {
                 "value": "0",
                 "value_src": "constant"
@@ -3005,6 +3009,18 @@
               "MAX_BURST_LENGTH": {
                 "value": "1",
                 "value_src": "auto"
+              },
+              "CLK_DOMAIN": {
+                "value": "OpenNTT_BD_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "NUM_READ_THREADS": {
+                "value": "4",
+                "value_src": "const_prop"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "4",
+                "value_src": "const_prop"
               }
             },
             "memory_map_ref": "s00_axi",
@@ -3168,6 +3184,14 @@
               "ASSOCIATED_RESET": {
                 "value": "s00_axi_aresetn",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "OpenNTT_BD_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
               }
             }
           },

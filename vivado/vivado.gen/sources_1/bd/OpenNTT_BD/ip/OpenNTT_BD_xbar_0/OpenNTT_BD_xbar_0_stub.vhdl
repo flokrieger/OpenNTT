@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Fri Oct 25 14:41:48 2024
+-- Date        : Fri Oct 25 14:41:46 2024
 -- Host        : ipn070 running 64-bit Ubuntu 22.04.5 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_xbar_0/OpenNTT_BD_xbar_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top OpenNTT_BD_xbar_0 -prefix
+--               OpenNTT_BD_xbar_0_ OpenNTT_BD_xbar_0_stub.vhdl
 -- Design      : OpenNTT_BD_xbar_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

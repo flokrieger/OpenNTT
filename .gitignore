@@ -1,1 +1,6 @@
 *__pycache__/
+vitis/
+
+tool/RomContent/
+tool/test_vectors_fft/
+tool/test_vectors_ntt/

@@ -1,3 +1,8 @@
+###################################################################
+# OpenNTT - 2024
+# Florian Krieger, Florian Hirner, Ahmet Can Mert, Sujoy Sinha Roy
+# Contact: florian.krieger@iaik.tugraz.at
+###################################################################
 
 # Modular inverse of an integer
 def egcd(a, b):

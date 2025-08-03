@@ -1,9 +1,15 @@
+###################################################################
+# OpenNTT - 2024
+# Florian Krieger, Florian Hirner, Ahmet Can Mert, Sujoy Sinha Roy
+# Contact: florian.krieger@iaik.tugraz.at
+###################################################################
+
 from math import log2, ceil
 from random import randint
 from helper import *
 from ntt import MFNTT_DIT_NR, FNTT_DIF_NR, FNTT_DIT_NR, MINTT_DIF_RN, INTT_DIF_RN, INTT_DIT_RN
 
-TV_PATH_HW = "./TestVectorsNTT/" 
+TV_PATH_HW = "./test_vectors_ntt/" 
 TV_PATH_SW = "../software/Testing/"
 
 def gen_tv_NTT_NR(w,n,q,is_dif,is_merged,q_it=None):
@@ -185,6 +191,9 @@ def gen_c_tv_NTT_NR(w_arr,n,pe,q_arr,is_dif,is_merged,base_forward,base_inverse,
       f.write("out_" + str(i) + ", ")
     f.write("NULL};\n")
 
+    f.write("uint64_t* in_ifft[]  = {NULL};\n")
+    f.write("uint64_t* out_ifft[] = {NULL};\n")
+
   if coeff_arith :
     gen_c_tv_PWM(n,q_arr,R_arr)
 
@@ -250,6 +259,9 @@ def gen_c_tv_NTT_RN(w_arr,n,pe,q_arr,is_dif,is_merged,base_inverse,num_poly,coef
     for i in range(len(q_arr)):
       f.write("in_" + str(i) + ", ")
     f.write("NULL};\n")
+
+    f.write("uint64_t* in_ifft[]  = {NULL};\n")
+    f.write("uint64_t* out_ifft[] = {NULL};\n")
 
   if coeff_arith :
     gen_c_tv_PWM(n,q_arr,R_arr)

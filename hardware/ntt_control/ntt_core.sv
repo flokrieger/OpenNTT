@@ -5,8 +5,12 @@
 */
 `timescale 1ns/1ps
 
-// Arithmetic and Control Core for NTT. Handles everything but has no RAM instance  
-module NTTCore #(
+// Arithmetic and Control Core for NTT and FFT. Handles everything but has no RAM instance  
+module NTTCore 
+  import FLP_pkg::*;
+  #(
+    parameter NTT = 1,
+
     parameter LOGQ = 28,
     parameter LOGN = 11,
     parameter PE = 8,
@@ -30,6 +34,7 @@ module NTTCore #(
     parameter NUM_POLY_MEMS = 1,
 
     // Memory configuration:
+    parameter MEMORY_OPTIMIZED = 0,
     parameter TW_ROM_MEM_TYPE = "fpga_block", // options: "xpm_block", "xpm_distributed", "xpm_auto", "xpm_ultra,  
                                               //          "fpga_block", "fpga_ultra", "fpga_distributed", "" (i.e., sim), "custom" (i.e., asic)
     parameter ROM_ADDR_WIDTH = 32,
@@ -78,7 +83,7 @@ module NTTCore #(
   if(INSTANTIATE_NR == 0 && INSTANTIATE_RN == 0)
     $error("invalid ntt type");
 
-  localparam BTF_LAT = NO_BFU ? BTF_SIM_LAT : (ADD_LAT + INTMUL_LAT + MODRED_LAT_INTERNAL + (IS_UNIFIED || IS_INVERSE ? 1 : 0));
+  localparam BTF_LAT = NO_BFU ? BTF_SIM_LAT : NTT ? (ADD_LAT + INTMUL_LAT + MODRED_LAT_INTERNAL + (IS_UNIFIED || IS_INVERSE ? 1 : 0)) : FFT_BF_LAT;
   localparam DATA_SHUFFLER_LAT_OVERALL = 3;
   if(RAM_RD_LAT + BTF_LAT + DATA_SHUFFLER_LAT_OVERALL > (1<<LOGN)/4/PE)
     $error("Error: Latency parameters will cause conflicts!");
@@ -157,6 +162,9 @@ module NTTCore #(
   logic ident_store_PolyArith, swap_store_PolyArith, valid_PolyArith;
   if(INSTANTIATE_MULT_ADD) begin
     logic valid_polyArith_internal, swap_polyArith;
+    logic [$clog2(NUM_POLY_MEMS*(1<<LOGN)/2/PE)-1:0] poly_base_a_arith, poly_base_b_arith;
+    assign poly_base_a_arith = poly_base_a_DP*(N/2/PE);
+    assign poly_base_b_arith = poly_base_b_DP*(N/2/PE);
     AddrGen_PolyArith #(
       .LOGN(LOGN),
       .PE(PE),
@@ -169,8 +177,8 @@ module NTTCore #(
       .clk(clk),
       .rst(ntt_opcode ? 1'd1 : rst),
       .sub_opcode(sub_opcode),
-      .poly_base_a(poly_base_a_DP*(N/2/PE)),
-      .poly_base_b(poly_base_b_DP*(N/2/PE)),
+      .poly_base_a(poly_base_a_arith),
+      .poly_base_b(poly_base_b_arith),
       .valid(valid_polyArith_internal),
       .swap(swap_polyArith),
       .done(done_polyArith),
@@ -178,7 +186,8 @@ module NTTCore #(
     );
 
     logic [LOGQ-1:0] mf;
-    assign mf = MODRED_TYPE == "default" ? montgomery_factor_DP : {{(LOGQ-1){1'd0}},1'd1};
+    assign mf = NTT ? (MODRED_TYPE == "default" ? montgomery_factor_DP : {{(LOGQ-1){1'd0}},1'd1}) :
+                      COMPLEX_ONE_ENCODING;
     DataShuffler_PolyArith #(
       .BTF_TYPE(BTF_TYPE),
       .LOGN(LOGN),
@@ -213,9 +222,11 @@ module NTTCore #(
   logic [LOGQ-1:0] tw [0:PE-1];
   logic rst_tw_gen;
   TwiddleGen #(
+      .NTT(NTT),
       .LOGQ(LOGQ),
       .LOGN(LOGN),
       .PE(PE),
+      .MEMORY_OPTIMIZED(MEMORY_OPTIMIZED),
       .NTT_TYPE(NTT_TYPE),
       .ROM_RD_LAT(ROM_RD_LAT),
       .ROM_ADDR_WIDTH(ROM_ADDR_WIDTH),
@@ -237,12 +248,14 @@ module NTTCore #(
       .tw_out(tw)
     );
   // latency constants for twiddle generation:
-  localparam MULT_LAT = INTMUL_LAT + MODRED_LAT_INTERNAL;
+   localparam MULT_LAT = NTT ? INTMUL_LAT + MODRED_LAT_INTERNAL : DELAY_COMPLEX_MULT;
   localparam MODMUL_LAT_CEIL = MULT_LAT == 4 || MULT_LAT == 8 || MULT_LAT == 16 ? 2<<$clog2(MULT_LAT) : 1<<$clog2(MULT_LAT);
-  localparam TW_GEN_LATENCY_PRIM = NTT_TYPE == "fntt_dit_nr" || NTT_TYPE == "intt_dit_rn" || NTT_TYPE == "fntt_dit_nr-intt_dit_rn" ? (PE == 1 ? ROM_RD_LAT+2 : 1) :
+  localparam TW_GEN_LATENCY_PRIM = !MEMORY_OPTIMIZED ? ((NTT_TYPE == "fntt_dif_nr" || NTT_TYPE == "intt_dif_rn" || NTT_TYPE == "mintt_dif_rn") && (MULT_LAT) % 2 == 1 ? ROM_RD_LAT + 2 : ROM_RD_LAT + 1): 
+                                NTT_TYPE == "fntt_dit_nr" || NTT_TYPE == "intt_dit_rn" || NTT_TYPE == "fntt_dit_nr-intt_dit_rn" ? (PE == 1 ? ROM_RD_LAT+2 : 1) :
                                 NTT_TYPE == "mfntt_dit_nr" || NTT_TYPE == "mfntt_dit_nr-mintt_dif_rn" ? 1 :
                                 NTT_TYPE == "fntt_dif_nr" || NTT_TYPE == "intt_dif_rn" || NTT_TYPE == "mintt_dif_rn" ? ROM_RD_LAT + MODMUL_LAT_CEIL - 1 : 0;
-  localparam TW_GEN_LATENCY_SEC = NTT_TYPE == "mfntt_dit_nr-mintt_dif_rn" ? ROM_RD_LAT + MODMUL_LAT_CEIL - 1 : TW_GEN_LATENCY_PRIM; 
+  localparam TW_GEN_LATENCY_SEC = !MEMORY_OPTIMIZED && NTT_TYPE == "mfntt_dit_nr-mintt_dif_rn" ? ROM_RD_LAT + 1 + ((MULT_LAT) % 2 == 1 ? 1:0) : 
+                                MEMORY_OPTIMIZED && NTT_TYPE == "mfntt_dit_nr-mintt_dif_rn" ? ROM_RD_LAT + MODMUL_LAT_CEIL - 1 : TW_GEN_LATENCY_PRIM;   
 
   // butterflies:
   logic [LOGQ-1:0] btf_out [0:PE-1][0:1];
@@ -258,7 +271,7 @@ module NTTCore #(
     for(genvar g = 0; g < PE; g = g + 1) begin    
       if(NO_BFU) begin
         shiftreg #(.DELAY(BTF_LAT), .LOGQ(2*LOGQ)) bf_dummy (.clk(clk), .data_in({ram_rdata[g][0],ram_rdata[g][1]}), .data_out({btf_out[g][0],btf_out[g][1]}));
-      end else begin
+      end else if(NTT) begin
         logic [LOGQ-1:0] q_reg;
         logic [1:0] opcode_reg;
         shiftreg #(.DELAY(2), .LOGQ(LOGQ)) sr_q (.clk(clk),.data_in(q),.data_out(q_reg));
@@ -292,6 +305,23 @@ module NTTCore #(
             .sub_out(),
             .mult_out()
         );
+      end else begin
+        logic [1:0] opcode_reg;
+        shiftreg #(.DELAY(2), .LOGQ(2)) sr_opcode (.clk(clk),.data_in(opcode),.data_out(opcode_reg));
+        FFTButterfly #(
+            .BTF_TYPE(BTF_TYPE), // "unified" or "ct" (DIT) or "gs" (DIF)
+            .DIV_BY_2(IS_UNIFIED || IS_INVERSE)  // instantiate division-by-2 module
+          ) btf (
+            .clk(clk),
+            .dif_dit(do_dit), // 0: dif, 1: dit (by default, it is 0)
+            .div_by_2(do_div_by_2), // perform final division by 2 if high
+            .opcode(opcode_reg), // 0: butterfly, 1: multiply, 2: modadd / modsub
+            .a(ntt_opcode ? ram_rdata[g][0] : bf_a_polyArith[g]),
+            .b(ntt_opcode ? ram_rdata[g][1] : bf_b_polyArith[g]),
+            .w(ntt_opcode ? tw[g]           : bf_c_polyArith[g]),
+            .e(btf_out[g][0]),
+            .o(btf_out[g][1])
+          );
       end
     end
   endgenerate

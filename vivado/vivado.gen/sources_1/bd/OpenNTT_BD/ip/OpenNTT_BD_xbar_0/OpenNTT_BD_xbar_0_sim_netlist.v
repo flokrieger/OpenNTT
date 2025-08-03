@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Fri Oct 25 14:41:48 2024
+// Date        : Fri Oct 25 14:41:47 2024
 // Host        : ipn070 running 64-bit Ubuntu 22.04.5 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/fkrieger/Desktop/openNTT/vivado/vivado.gen/sources_1/bd/OpenNTT_BD/ip/OpenNTT_BD_xbar_0/OpenNTT_BD_xbar_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top OpenNTT_BD_xbar_0 -prefix
+//               OpenNTT_BD_xbar_0_ OpenNTT_BD_xbar_0_sim_netlist.v
 // Design      : OpenNTT_BD_xbar_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -398,7 +398,6 @@ module OpenNTT_BD_xbar_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_28_addr_arbiter" *) 
 module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_addr_arbiter
    (E,
     p_1_in,
@@ -1821,13 +1820,13 @@ endmodule
 (* C_NUM_MASTER_SLOTS = "2" *) (* C_NUM_SLAVE_SLOTS = "1" *) (* C_R_REGISTER = "0" *) 
 (* C_S_AXI_ARB_PRIORITY = "0" *) (* C_S_AXI_BASE_ID = "0" *) (* C_S_AXI_READ_ACCEPTANCE = "2" *) 
 (* C_S_AXI_SINGLE_THREAD = "0" *) (* C_S_AXI_THREAD_ID_WIDTH = "0" *) (* C_S_AXI_WRITE_ACCEPTANCE = "2" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_crossbar_v2_1_28_axi_crossbar" *) (* P_ADDR_DECODE = "1" *) 
-(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
-(* P_AXILITE_SIZE = "3'b010" *) (* P_FAMILY = "zynq" *) (* P_INCR = "2'b01" *) 
-(* P_LEN = "8" *) (* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) 
-(* P_M_AXI_SUPPORTS_READ = "2'b11" *) (* P_M_AXI_SUPPORTS_WRITE = "2'b11" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) 
-(* P_RANGE_CHECK = "1" *) (* P_S_AXI_BASE_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) 
-(* P_S_AXI_SUPPORTS_READ = "1'b1" *) (* P_S_AXI_SUPPORTS_WRITE = "1'b1" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* P_ADDR_DECODE = "1" *) (* P_AXI3 = "1" *) 
+(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_AXILITE_SIZE = "3'b010" *) 
+(* P_FAMILY = "zynq" *) (* P_INCR = "2'b01" *) (* P_LEN = "8" *) 
+(* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_M_AXI_SUPPORTS_READ = "2'b11" *) 
+(* P_M_AXI_SUPPORTS_WRITE = "2'b11" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) (* P_RANGE_CHECK = "1" *) 
+(* P_S_AXI_BASE_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_SUPPORTS_READ = "1'b1" *) 
+(* P_S_AXI_SUPPORTS_WRITE = "1'b1" *) 
 module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_axi_crossbar
    (aclk,
     aresetn,
@@ -2187,7 +2186,6 @@ module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_axi_crossbar
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_28_crossbar" *) 
 module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_crossbar
    (\gen_single_thread.active_target_hot_reg[0] ,
     \m_payload_i_reg[66] ,
@@ -2774,7 +2772,6 @@ module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_crossbar
         .s_ready_i0__1(s_ready_i0__1));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_28_decerr_slave" *) 
 module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_decerr_slave
    (mi_rvalid_2,
     \gen_axi.s_axi_rlast_i ,
@@ -3238,7 +3235,6 @@ module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_decerr_slave
         .O(\gen_axi.s_axi_bvalid_i_reg_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_28_si_transactor" *) 
 module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_si_transactor
    (\gen_single_thread.active_target_enc_reg[1]_0 ,
     \gen_single_thread.active_target_hot_reg[0]_0 ,
@@ -4337,7 +4333,6 @@ module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_si_transactor__parameterized0
         .O(\gen_single_thread.active_target_hot_reg[0]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_28_splitter" *) 
 module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_splitter
    (\m_ready_d_reg[1]_0 ,
     \m_ready_d_reg[1]_1 ,
@@ -4499,7 +4494,6 @@ module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_splitter_3
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_28_wdata_router" *) 
 module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_wdata_router
    (st_aa_awtarget_enc,
     ss_wr_awready,
@@ -4582,7 +4576,6 @@ module OpenNTT_BD_xbar_0_axi_crossbar_v2_1_28_wdata_router
         .st_aa_awtarget_enc(st_aa_awtarget_enc));
 endmodule
 
-(* ORIG_REF_NAME = "axi_data_fifo_v2_1_26_axic_reg_srl_fifo" *) 
 module OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_axic_reg_srl_fifo
    (st_aa_awtarget_enc,
     ss_wr_awready,
@@ -4933,7 +4926,6 @@ module OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_axic_reg_srl_fifo
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_data_fifo_v2_1_26_ndeep_srl" *) 
 module OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_ndeep_srl
    (storage_data2,
     st_aa_awtarget_enc,
@@ -5094,7 +5086,6 @@ module OpenNTT_BD_xbar_0_axi_data_fifo_v2_1_26_ndeep_srl_4
         .O(\gen_primitive_shifter.gen_srls[0].srl_inst_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_27_axi_register_slice" *) 
 module OpenNTT_BD_xbar_0_axi_register_slice_v2_1_27_axi_register_slice
    (st_mr_bvalid,
     m_axi_bready,

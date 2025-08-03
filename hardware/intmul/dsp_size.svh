@@ -1,2 +1,0 @@
-`define DSP_PORT_SIZE_A 24
-`define DSP_PORT_SIZE_B 17
