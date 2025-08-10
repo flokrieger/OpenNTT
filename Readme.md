@@ -1,6 +1,6 @@
 # OpenNTT
 This repository provides the source code for OpenNTT - An automated toolchain for compiling high-performance NTT and FFT hardware accelerators. The updated version of OpenNTT allows choosing between low-memory optimized (MemOpt) and enhanced frequency (RoutOpt) designs.
-You can find all details about OpenNTT in the accompanying conference paper [here](https://dl.acm.org/doi/10.1145/3676536.3697123) and the more recent journal paper [here](https://eprint.iacr.org/2025/1407).
+You can find all details about OpenNTT in the accompanying conference paper [here](https://dl.acm.org/doi/10.1145/3676536.3697123) and the more recent journal paper [here](https://ieeexplore.ieee.org/abstract/document/11112724).
 
 This repo contains:
 - The OpenNTT tool to compile NTT and FFT hardware designs
@@ -136,12 +136,13 @@ If you use OpenNTT in your research/study, please consider citing our work:
   series = {ICCAD '24}
 }
 
-@misc{cryptoeprint:2025/1407,
-      author = {Florian Krieger and Florian Hirner and Ahmet Can Mert and Sujoy Sinha Roy},
-      title = {A Flexible Hardware Design Tool for Fast Fourier and Number-Theoretic Transformation Architectures},
-      howpublished = {Cryptology {ePrint} Archive, Paper 2025/1407},
-      year = {2025},
-      doi = {10.1109/TCAD.2025.3595834},
-      url = {https://eprint.iacr.org/2025/1407}
-}
+@ARTICLE{11112724,
+  author={Krieger, Florian and Hirner, Florian and Mert, Ahmet Can and Roy, Sujoy Sinha},
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
+  title={A Flexible Hardware Design Tool for Fast Fourier and Number-Theoretic Transformation Architectures}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TCAD.2025.3595834}}
 ```
