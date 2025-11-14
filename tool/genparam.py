@@ -72,7 +72,7 @@ def find_min_primitive_root(m,q):
 # Generate necessary NTT parameters given n and log(q)
 def generate_params(n,logq,q_prev=[],q=None):
 
-    # if q is not given
+    # if q is not given: find q suitable for merged and non-merged NTT (i.e. 2n-th root exists)
     if q == None:
         p_found = False
         while (not(p_found)):
@@ -92,16 +92,27 @@ def generate_params(n,logq,q_prev=[],q=None):
         return n,q,psi,psiv,w,wv
     # if q is given
     else:
-        if q % (2*n) != 1:
+        if q % n != 1:
             raise Exception("Given coefficient modulus does not meet requirement for NTT.")
+        
+        if q % (2*n) != 1:
+            # Take n-th root
+            q_found, w = find_min_primitive_root(n,q)
+            if not(q_found):
+                raise Exception("Cannot find primitive root for given coefficient modulus")
+            else:
+                psi  = None
+                psiv = None
+                wv   = modinv(w,q)
         else:
+            # Take 2n-th root
             q_found, psi = find_min_primitive_root(2*n,q)
             if not(q_found):
                 raise Exception("Cannot find primitive root for given coefficient modulus")
             else:
-                psiv= modinv(psi,q)
-                w   = pow(psi,2,q)
-                wv  = modinv(w,q)
+                psiv = modinv(psi,q)
+                w    = pow(psi,2,q)
+                wv   = modinv(w,q)
 
         return n,q,psi,psiv,w,wv
 

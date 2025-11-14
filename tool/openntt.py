@@ -189,7 +189,7 @@ def openntt_generator_NTT(ntt_type, \
       q_arr += [q_generated]
       logq_max = max(ceil(log2(q_generated)),logq_max)
     else: # q provided
-      if merged and q % (2*n) != 1 or not merged and q % (n) != 1: raise Exception("Invalid prime")
+      if merged and q % (2*n) != 1 or not merged and q % (n) != 1: raise Exception("Invalid prime: no proper root exists")
       if q % (2*n) != 1: 
         word_size = ceil(log2(n))
       q_arr += [q]
@@ -205,6 +205,8 @@ def openntt_generator_NTT(ntt_type, \
     for i in range(q_count):
       seed(1234)
       _, _, psi,psiv,w,wv = generate_params(n,None,q=q_arr[i])
+      if merged:
+        assert psi is not None and psiv is not None
       tw_list_forward += [psi  if merged else w ]
       tw_list_inverse += [psiv if merged else wv]
   
